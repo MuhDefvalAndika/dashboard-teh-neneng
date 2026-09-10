@@ -5,29 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
 <meta name="theme-color" content="#111a2c">
 <title>Keuangan Warnet & Seblak</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 <style>
 :root{
-  --bg:#eef1f6;--card:#fff;--text:#141a2c;--muted:#6b7488;--border:#e2e6ef;
-  --sidebar:#0c1322;--sidebar2:#131c33;--primary:#2f5fed;--primary2:#1f47c4;
-  --green:#189a56;--red:#e0392c;--orange:#d97706;--purple:#7c5cff;
-  --seblak:#e0392c;--seblak2:#b82c21;
-  --font-ui:"Plus Jakarta Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
-  --font-mono:"JetBrains Mono","Courier New",Courier,monospace;
+  --bg:#f4f7fb;--card:#fff;--text:#17233d;--muted:#74809a;--border:#e6ebf3;
+  --sidebar:#111a2c;--primary:#2563eb;--primary2:#1d4ed8;
+  --green:#16a34a;--red:#ef4444;--orange:#f59e0b;--purple:#8b5cf6;
+  --seblak:#dc2626;--seblak2:#b91c1c;
 }
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{margin:0;padding:0;overflow-x:hidden}
-body{font-family:var(--font-ui);background:var(--bg);color:var(--text);-webkit-text-size-adjust:100%;font-feature-settings:"ss01" 1}
+body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--text);-webkit-text-size-adjust:100%}
 button,input,select,textarea{font:inherit}
 button{cursor:pointer;touch-action:manipulation}
 .hidden{display:none!important}
-:focus-visible{outline:2.5px solid var(--primary);outline-offset:2px;border-radius:6px}
-@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 
 .form-group{margin-bottom:0}
 .form-group label{display:block;font-size:12.5px;font-weight:750;margin-bottom:8px;color:#344054}
@@ -38,7 +31,6 @@ button{cursor:pointer;touch-action:manipulation}
 .form-group input[type="date"]{font-weight:600}
 .input-help{font-size:10.5px;color:var(--muted);margin-top:6px}
 
-/* LOGIN */
 .login{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;background:#fff}
 .login-left{display:flex;flex-direction:column;justify-content:center;align-items:center;padding:40px 30px;position:relative}
 .login-form-wrap{width:100%;max-width:400px}
@@ -199,7 +191,6 @@ button{cursor:pointer;touch-action:manipulation}
 .empty-state .icon{font-size:42px;margin-bottom:10px;opacity:.5}
 .empty-state p{margin:0;font-size:13px}
 
-/* TOP MENU */
 .topmenu-tabs{display:flex;gap:8px;overflow-x:auto;padding:0 0 12px;margin-bottom:16px;border-bottom:1px solid var(--border);-webkit-overflow-scrolling:touch;scrollbar-width:none}
 .topmenu-tabs::-webkit-scrollbar{display:none}
 .topmenu-tab{padding:9px 16px;border-radius:10px;border:1.5px solid var(--border);background:#fff;font-size:13px;font-weight:750;color:#42526d;white-space:nowrap;cursor:pointer;transition:.15s;flex:none}
@@ -219,7 +210,6 @@ button{cursor:pointer;touch-action:manipulation}
 .topmenu-stats{text-align:right;flex:none}
 .topmenu-qty{font-size:15px;font-weight:850;color:#d97706;letter-spacing:-.3px;line-height:1.2}
 .topmenu-rp{font-size:11px;color:var(--muted);font-weight:650;margin-top:2px}
-
 .topmenu-bar{height:6px;background:#f1f5f9;border-radius:6px;margin-top:8px;overflow:hidden;grid-column:1/-1}
 .topmenu-bar span{display:block;height:100%;background:linear-gradient(90deg,#fbbf24,#d97706);border-radius:6px;transition:width .5s ease}
 
@@ -417,6 +407,9 @@ button{cursor:pointer;touch-action:manipulation}
 .struk-actions{display:grid;grid-template-columns:1fr 1.2fr;gap:10px}
 .struk-actions .btn{padding:14px;font-size:14px;border-radius:12px;min-height:48px}
 
+.print-method-info{background:#eff6ff;border:1px solid #bfdbfe;border-radius:10px;padding:10px 12px;margin-bottom:14px;font-size:11.5px;color:#1e40af;line-height:1.5}
+.print-method-info strong{color:#1e3a8a}
+
 #printHeader{display:none}
 #printArea{position:fixed;left:-99999px;top:0;width:900px;background:#fff;padding:30px;font-family:Inter,Arial,sans-serif;color:#17233d}
 #printArea h1{font-size:22px;margin:0 0 4px}
@@ -554,7 +547,6 @@ button{cursor:pointer;touch-action:manipulation}
   .data-banner button{width:100%}
   .toast{right:12px;left:12px;bottom:14px;text-align:center;font-size:13px;padding:13px 15px}
 
-  /* TOP MENU MOBILE */
   .topmenu-tabs{gap:6px;padding-bottom:10px;margin-bottom:12px}
   .topmenu-tab{padding:9px 13px;font-size:12px;border-radius:9px}
   .topmenu-item{padding:12px 13px;gap:10px;grid-template-columns:auto 1fr auto}
@@ -567,7 +559,6 @@ button{cursor:pointer;touch-action:manipulation}
   .dead-menu-box h4{font-size:12.5px}
   .dead-menu-item{font-size:11px;padding:5px 10px}
 
-  /* KASIR MOBILE */
   .kasir-header{padding:14px;gap:10px;margin-bottom:12px;flex-direction:column;align-items:stretch;border-radius:14px}
   .kasir-header h2{font-size:15.5px;margin:0 0 3px;line-height:1.25}
   .kasir-header p{font-size:10.5px;line-height:1.4;margin-bottom:6px}
@@ -673,71 +664,10 @@ button{cursor:pointer;touch-action:manipulation}
   .hero-today{grid-template-columns:1fr}
   .kasir-grid{grid-template-columns:1fr}
 }
-
-@media print{
-  body:not(.struk-printing){background:#fff}
-  body:not(.struk-printing) .sidebar,
-  body:not(.struk-printing) .overlay,
-  body:not(.struk-printing) .topbar,
-  body:not(.struk-printing) .mobile-btn,
-  body:not(.struk-printing) .data-banner,
-  body:not(.struk-printing) .toolbar,
-  body:not(.struk-printing) .action-btn,
-  body:not(.struk-printing) .btn,
-  body:not(.struk-printing) .hero-today,
-  body:not(.struk-printing) .section-head,
-  body:not(.struk-printing) .tx-header,
-  body:not(.struk-printing) .tx-filters,
-  body:not(.struk-printing) .tx-quick,
-  body:not(.struk-printing) .tx-count,
-  body:not(.struk-printing) .confirm-modal,
-  body:not(.struk-printing) .prod-modal,
-  body:not(.struk-printing) .pay-modal,
-  body:not(.struk-printing) .struk-modal,
-  body:not(.struk-printing) .cart-float,
-  body:not(.struk-printing) .cart-overlay,
-  body:not(.struk-printing) .kasir-search-wrap,
-  body:not(.struk-printing) .topmenu-tabs,
-  body:not(.struk-printing) .toast{display:none!important}
-  body:not(.struk-printing) .main{margin:0;width:100%;padding:0}
-  body:not(.struk-printing) .card{box-shadow:none;border:1px solid #ccc;page-break-inside:avoid}
-  body:not(.struk-printing) .tx-card{padding:0;border:0}
-  body:not(.struk-printing) .section{display:none}
-  body:not(.struk-printing) .section.active{display:block}
-  body:not(.struk-printing) .table-wrap{overflow:visible}
-  body:not(.struk-printing) .table thead{display:table-header-group}
-  body:not(.struk-printing) .table th{background:#f1f5f9!important}
-  body:not(.struk-printing) .table tr{display:table-row;background:none;border:0;padding:0;margin:0;box-shadow:none}
-  body:not(.struk-printing) .table td{display:table-cell;border-bottom:1px solid #ddd;text-align:left;padding:12px 9px}
-  body:not(.struk-printing) .table td::before{content:none}
-  body:not(.struk-printing) #printHeader{display:block!important;text-align:center;margin-bottom:20px}
-  body:not(.struk-printing) #printHeader h1{margin:0 0 6px;font-size:22px}
-  body:not(.struk-printing) #printHeader p{margin:0;color:#555;font-size:12px}
-}
-
-@media print{
-  body.struk-printing{background:#fff!important;margin:0!important;padding:0!important}
-  body.struk-printing *{visibility:hidden!important}
-  body.struk-printing #strukPrint,
-  body.struk-printing #strukPrint *{visibility:visible!important}
-  body.struk-printing #strukPrint{
-    display:block!important;position:absolute!important;left:0!important;top:0!important;
-    width:58mm!important;max-width:58mm!important;padding:2mm 2mm!important;margin:0!important;
-    font-family:'Courier New',Courier,monospace!important;font-size:9.5pt!important;line-height:1.35!important;
-    color:#000!important;background:#fff!important;box-shadow:none!important;overflow:visible!important;
-  }
-  body.struk-printing #strukPrint .center{text-align:center!important;display:block!important}
-  body.struk-printing #strukPrint .big{font-size:12pt!important;font-weight:900!important;letter-spacing:.5px!important;text-align:center!important;display:block!important}
-  body.struk-printing #strukPrint .divider{display:block!important;border-top:1px dashed #000!important;margin:4px 0!important}
-  body.struk-printing #strukPrint .row{display:flex!important;justify-content:space-between!important;gap:4px!important}
-  body.struk-printing #strukPrint .row-total{display:flex!important;justify-content:space-between!important;font-weight:900!important;font-size:10.5pt!important}
-  @page{size:58mm auto;margin:0}
-}
 </style>
 </head>
 <body>
 
-<!-- LOGIN -->
 <div id="loginPage" class="login">
   <div class="login-left">
     <div class="login-form-wrap">
@@ -802,7 +732,6 @@ button{cursor:pointer;touch-action:manipulation}
   </div>
 </div>
 
-<!-- APP -->
 <div id="app" class="app hidden">
 <aside id="sidebar" class="sidebar">
   <div class="brand"><div class="brand-icon">KS</div><div>Keuangan<small>Warnet & Seblak</small></div></div>
@@ -818,7 +747,7 @@ button{cursor:pointer;touch-action:manipulation}
     <button data-page="statistik">📈 &nbsp; Statistik</button>
     <button class="logout" id="logoutBtn">↪ &nbsp; Keluar</button>
   </div>
-  <div class="sidebar-footer">Sistem Keuangan<br>Warnet & Warung Seblak<br><br>v4.5</div>
+  <div class="sidebar-footer">Sistem Keuangan<br>Warnet & Warung Seblak<br><br>v4.6</div>
 </aside>
 <div class="overlay" id="overlay"></div>
 
@@ -947,7 +876,6 @@ button{cursor:pointer;touch-action:manipulation}
     </button>
   </section>
 
-  <!-- MENU TERLARIS -->
   <section id="topmenu" class="section">
     <div class="section-head">
       <h2>🏆 Menu Terlaris</h2>
@@ -958,9 +886,7 @@ button{cursor:pointer;touch-action:manipulation}
         <option value="all">Semua Waktu</option>
       </select>
     </div>
-
     <div class="topmenu-tabs" id="topmenuTabs"></div>
-
     <div id="topmenuContent">
       <div class="prod-loading"><div class="spinner"></div><div>Memuat data...</div></div>
     </div>
@@ -1191,15 +1117,21 @@ button{cursor:pointer;touch-action:manipulation}
 <div id="strukModal" class="struk-modal">
   <div class="struk-card">
     <h3>✅ Transaksi Berhasil</h3>
+    <div class="print-method-info">
+      <strong>💡 Info Cetak:</strong> Pastikan aplikasi <strong>RawBT</strong> sudah terinstall dan printer sudah dipairing. Klik <strong>Cetak Struk</strong> untuk print langsung.
+    </div>
     <div class="struk-preview" id="strukPreview"></div>
     <div class="struk-actions">
       <button class="btn btn-light" id="strukSkipBtn">Lanjut Tanpa Cetak</button>
       <button class="btn btn-seblak" id="strukPrintBtn">🖨 Cetak Struk</button>
     </div>
+    <button class="btn btn-ghost" id="strukBrowserPrintBtn" style="width:100%;margin-top:8px;font-size:12px;min-height:40px">🖨 Cetak via Browser (fallback)</button>
   </div>
 </div>
 
 <div id="strukPrint"></div>
+<iframe id="rawbtFrame" style="display:none;width:0;height:0;border:0;position:absolute;left:-9999px"></iframe>
+
 <div id="toast" class="toast"></div>
 <div id="printArea"></div>
 
@@ -1675,9 +1607,6 @@ function drawCharts(){
  statChart2=new Chart(document.getElementById("statChart2"),{type:"bar",data:{labels:["Warnet","Seblak"],datasets:[{label:"Pemasukan",data:[x.wi,x.si]},{label:"Pengeluaran",data:[x.wo,x.so]}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:"bottom",labels:{boxWidth:10,font:{size:11}}}},scales:{y:{beginAtZero:true,ticks:{font:{size:10}}},x:{ticks:{font:{size:10}}}}}});
 }
 
-/* ============================================================
-   MENU TERLARIS
-============================================================ */
 async function loadTopMenus(){
   const range=document.getElementById("topmenuRange").value;
   topMenuRange=range;
@@ -1765,9 +1694,6 @@ function renderTopMenus(){
 
 document.getElementById("topmenuRange").addEventListener("change",loadTopMenus);
 
-/* ============================================================
-   LAPORAN
-============================================================ */
 document.getElementById("reportBtn").onclick=()=>{
  const a=document.getElementById("reportStart").value,b=document.getElementById("reportEnd").value;
  const list=transactions.filter(t=>(!a||t.tanggal>=a)&&(!b||t.tanggal<=b));
@@ -1942,13 +1868,10 @@ function renderTabs(){
 function renderProducts(){
   const grid=document.getElementById("kasirGrid");
   let list=currentCategory==="Semua"?products:products.filter(p=>p.kategori===currentCategory);
-
-  // Apply search
   if(searchQuery){
     const q=searchQuery.toLowerCase();
     list=list.filter(p=>p.nama.toLowerCase().includes(q) || (p.kategori||"").toLowerCase().includes(q));
   }
-
   if(!list.length){
     grid.innerHTML=`<div class="prod-loading"><div style="font-size:38px;margin-bottom:8px;opacity:.4">📭</div><div>${searchQuery?"Tidak ada menu cocok dengan pencarian":"Tidak ada menu di kategori ini"}</div></div>`;
     return;
@@ -1982,7 +1905,6 @@ function handleProductTap(id){
   openProdModal(p,{withKuah:false,withTopping:false});
 }
 
-/* SEARCH */
 document.getElementById("kasirSearch").addEventListener("input",e=>{
   searchQuery=e.target.value.trim();
   const clr=document.getElementById("kasirSearchClear");
@@ -2463,6 +2385,55 @@ function buildStrukHTML(data){
   return lines.join("\n");
 }
 
+function buildStrukTextForRawBT(data){
+  let text = "";
+  
+  text += "     SEBLAK TEH NENENG     \n";
+  text += "Klasik Rasanya, Ikonik Pedasnya\n";
+  text += "--------------------------------\n";
+  text += "Leuwigajah, Cimahi Selatan\n";
+  text += "Cimahi City, West Java 40532\n";
+  text += "WA: +62 889-9459-9150\n";
+  text += "--------------------------------\n";
+  text += "No   : " + data.nomor + "\n";
+  const tglFmt = new Intl.DateTimeFormat("id-ID",{day:"2-digit",month:"2-digit",year:"numeric"}).format(data.waktu);
+  const jamFmt = String(data.waktu.getHours()).padStart(2,"0")+":"+String(data.waktu.getMinutes()).padStart(2,"0");
+  text += "Tgl  : " + tglFmt + " " + jamFmt + "\n";
+  text += "Kasir: " + data.kasir + "\n";
+  text += "Mode : " + data.mode + "\n";
+  text += "--------------------------------\n";
+
+  data.items.forEach((it,idx)=>{
+    text += (idx+1) + ". " + it.nama;
+    if(it.kuah) text += " (" + it.kuah + ")";
+    text += "\n";
+    if(it.toppings && it.toppings.length){
+      text += "   + " + it.toppings.map(t=>t.nama).join(", ") + "\n";
+    }
+    let hargaLabel = Number(it.harga).toLocaleString("id-ID");
+    if(it._customPrice) hargaLabel += "*";
+    text += "   " + it.qty + " x " + hargaLabel;
+    text += "      " + (it.harga*it.qty).toLocaleString("id-ID") + "\n";
+  });
+
+  text += "--------------------------------\n";
+  text += "TOTAL  : Rp " + data.total.toLocaleString("id-ID") + "\n";
+  if(data.metode==="Tunai"){
+    text += "Bayar  : Rp " + data.bayar.toLocaleString("id-ID") + "\n";
+    text += "Kembali: Rp " + data.kembali.toLocaleString("id-ID") + "\n";
+  } else {
+    text += "Metode : " + data.metode + "\n";
+  }
+  text += "--------------------------------\n";
+  text += "     Terima kasih sudah\n";
+  text += "       berkunjung\n";
+  text += "     Selamat menikmati!\n";
+  text += "\n";
+  text += "    ~ Seblak Teh Neneng ~\n";
+  text += "\n\n\n\n";
+  return text;
+}
+
 function showStruk(data){
   const html=buildStrukHTML(data);
   document.getElementById("strukPreview").innerHTML=html;
@@ -2475,6 +2446,18 @@ document.getElementById("strukSkipBtn").onclick=()=>{
 
 document.getElementById("strukPrintBtn").onclick=()=>{
   if(!lastStrukData) return;
+  
+  const strukText = buildStrukTextForRawBT(lastStrukData);
+  const encodedText = encodeURIComponent(strukText);
+  const rawbtUrl = "rawbt:" + encodedText;
+  
+  document.getElementById("rawbtFrame").src = rawbtUrl;
+  
+  showToast("Mengirim ke printer...");
+};
+
+document.getElementById("strukBrowserPrintBtn").onclick=()=>{
+  if(!lastStrukData) return;
   const printArea=document.getElementById("strukPrint");
   printArea.innerHTML=buildStrukHTML(lastStrukData);
   document.body.classList.add("struk-printing");
@@ -2486,7 +2469,6 @@ document.getElementById("strukPrintBtn").onclick=()=>{
   },100);
 };
 
-/* MOBILE CART */
 const cartFloatBtn=document.getElementById("cartFloat");
 const cartOverlay=document.getElementById("cartOverlay");
 const kasirCartEl=document.getElementById("kasirCart");
@@ -2515,7 +2497,6 @@ document.addEventListener("keydown",e=>{
   if(e.key==="Escape") closeCartSheet();
 });
 
-/* TAMBAH MENU MANUAL */
 function populateCategorySelect(){
   const sel=document.getElementById("amCategory");
   const cats=getAllCategories();
