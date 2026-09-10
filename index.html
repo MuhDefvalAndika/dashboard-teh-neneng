@@ -31,6 +31,7 @@ button{cursor:pointer;touch-action:manipulation}
 .form-group input[type="date"]{font-weight:600}
 .input-help{font-size:10.5px;color:var(--muted);margin-top:6px}
 
+/* LOGIN */
 .login{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;background:#fff}
 .login-left{display:flex;flex-direction:column;justify-content:center;align-items:center;padding:40px 30px;position:relative}
 .login-form-wrap{width:100%;max-width:400px}
@@ -382,6 +383,7 @@ button{cursor:pointer;touch-action:manipulation}
 
 #strukPrint{display:none}
 
+/* RESPONSIVE */
 @media(max-width:1200px){
   .kasir-wrap{grid-template-columns:1fr 340px}
   .grid3{grid-template-columns:1fr 1fr}
@@ -415,116 +417,117 @@ button{cursor:pointer;touch-action:manipulation}
   .sidebar{transform:translateX(-100%);transition:transform .25s ease;width:82%;max-width:320px;box-shadow:8px 0 30px #0004}
   .sidebar.open{transform:translateX(0)}
   .sidebar-footer{position:static;margin-top:30px;padding-left:10px}
-  .main{margin-left:0;width:100%;padding:16px 14px 40px}
+  .main{margin-left:0;width:100%;padding:14px 12px 40px}
 
-  .topbar{margin-bottom:16px;gap:10px}
+  .topbar{margin-bottom:14px;gap:10px}
   .mobile-btn{display:flex;align-items:center;justify-content:center;flex:none}
-  .topbar h1{font-size:18px;line-height:1.2;margin:0 0 2px}
-  .date{font-size:10.5px}
+  .topbar h1{font-size:17px;line-height:1.2;margin:0 0 2px}
+  .date{font-size:10px}
 
-  .section-head{margin:0 0 12px;gap:8px}
-  .section-head h2{font-size:14px}
-  .section-head h2 small{font-size:11px;display:block;margin-left:0;margin-top:2px}
-  .section-head .range-select{width:100%;padding:10px 34px 10px 14px;font-size:13.5px;min-height:42px}
+  .section-head{margin:0 0 10px;gap:8px}
+  .section-head h2{font-size:13.5px}
+  .section-head h2 small{font-size:10.5px;display:block;margin-left:0;margin-top:2px}
+  .section-head .range-select{width:100%;padding:10px 34px 10px 12px;font-size:13px;min-height:42px}
 
-  .hero-today{grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px}
-  .hero-card{padding:14px 14px;border-radius:14px}
-  .hero-card::after{width:90px;height:90px;right:-25px;top:-25px}
-  .hero-card .h-label{font-size:10px;margin-bottom:6px}
-  .hero-card .h-value{font-size:16px}
-  .hero-card .h-sub{font-size:10px;margin-top:5px}
+  .hero-today{grid-template-columns:1fr 1fr;gap:9px;margin-bottom:16px}
+  .hero-card{padding:12px 12px;border-radius:13px}
+  .hero-card::after{width:80px;height:80px;right:-20px;top:-20px}
+  .hero-card .h-label{font-size:9.5px;margin-bottom:5px;letter-spacing:.04em}
+  .hero-card .h-value{font-size:15px;letter-spacing:-.3px}
+  .hero-card .h-sub{font-size:9.5px;margin-top:4px}
 
-  .cards{gap:10px;margin-bottom:14px}
+  .cards{gap:9px;margin-bottom:12px}
   .cards-main,.cards-biz{grid-template-columns:1fr 1fr}
-  .card{padding:14px;border-radius:14px}
-  .stat-card{min-height:112px}
+  .card{padding:13px;border-radius:13px}
+  .stat-card{min-height:110px}
   .stat-head{margin-bottom:8px}
-  .stat-label{font-size:11px}
-  .stat-value{font-size:15.5px}
-  .stat-icon{width:32px;height:32px;font-size:15px;border-radius:9px}
-  .trend{font-size:10px}
+  .stat-label{font-size:10.5px}
+  .stat-value{font-size:15px}
+  .stat-icon{width:30px;height:30px;font-size:14px;border-radius:8px}
+  .trend{font-size:9.5px}
 
-  .chart-wrap,.chart-small{height:230px}
-  .card h3{font-size:14px;margin-bottom:12px}
-  .toolbar{flex-direction:column;align-items:stretch;gap:10px}
+  .chart-wrap,.chart-small{height:220px}
+  .card h3{font-size:13.5px;margin-bottom:10px}
+  .toolbar{flex-direction:column;align-items:stretch;gap:9px}
 
-  .tx-header{padding:14px 16px 12px}
-  .tx-header h3{font-size:15px}
+  .tx-header{padding:14px 14px 12px}
+  .tx-header h3{font-size:14.5px}
   .tx-actions{width:100%}
-  .tx-actions .btn{flex:1;padding:10px;font-size:13px}
-  .tx-filters{padding:14px 16px;grid-template-columns:1fr 1fr;gap:10px}
+  .tx-actions .btn{flex:1;padding:10px;font-size:12.5px;min-height:42px}
+  .tx-filters{padding:14px;grid-template-columns:1fr 1fr;gap:9px}
   .filter-item:nth-child(1){grid-column:1/-1}
-  .filter-item label{font-size:10px}
-  .filter-item input,.filter-item select{padding:11px 12px;font-size:14px;min-height:42px}
+  .filter-item label{font-size:9.5px}
+  .filter-item input,.filter-item select{padding:11px 12px;font-size:13.5px;min-height:42px}
   .filter-reset{grid-column:1/-1}
-  .filter-reset .btn{width:100%;min-height:42px}
-  .tx-quick{padding:10px 16px;gap:6px}
-  .tx-quick .quick-label{width:100%;margin-bottom:4px;font-size:10.5px}
-  .tx-quick .btn{flex:1;min-width:calc(50% - 3px);font-size:12px;padding:9px 10px;min-height:38px}
-  .tx-count{padding:10px 16px;font-size:11.5px}
+  .filter-reset .btn{width:100%;min-height:42px;font-size:14px}
+  .tx-quick{padding:10px 14px;gap:6px}
+  .tx-quick .quick-label{width:100%;margin-bottom:4px;font-size:10px}
+  .tx-quick .btn{flex:1;min-width:calc(50% - 3px);font-size:11.5px;padding:8px 10px;min-height:36px}
+  .tx-count{padding:9px 14px;font-size:11px}
 
   .table-wrap{overflow:visible;margin:0}
   .table thead{display:none}
-  .table tbody{display:block;padding:12px 16px}
-  .table tr{display:block;background:#fff;border:1px solid var(--border);border-radius:14px;padding:14px 16px;margin-bottom:10px;box-shadow:0 3px 12px #17233d08}
-  .table td{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border:0;white-space:normal;font-size:12.5px;text-align:right;gap:10px}
+  .table tbody{display:block;padding:12px 14px}
+  .table tr{display:block;background:#fff;border:1px solid var(--border);border-radius:13px;padding:13px 14px;margin-bottom:10px;box-shadow:0 3px 10px #17233d08}
+  .table td{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border:0;white-space:normal;font-size:12px;text-align:right;gap:10px}
   .table td + td{border-top:1px dashed #f1f5f9}
-  .table td::before{content:attr(data-label);font-weight:750;color:#78849b;font-size:10.5px;text-align:left;flex:none;text-transform:uppercase;letter-spacing:.04em}
+  .table td::before{content:attr(data-label);font-weight:750;color:#78849b;font-size:10px;text-align:left;flex:none;text-transform:uppercase;letter-spacing:.04em}
   .table td:first-child{display:none}
   .table tr:hover td{background:transparent}
-  .table td[data-label="Nominal"]{font-size:14px}
+  .table td[data-label="Nominal"]{font-size:13.5px}
   .table td[data-label="Nominal"] b{color:#0f172a}
-  .table td[data-label="Aksi"]{justify-content:flex-end;padding-top:10px}
-  .action-btn{padding:9px 12px;font-size:14px;margin-left:5px}
+  .table td[data-label="Aksi"]{justify-content:flex-end;padding-top:10px;gap:8px}
+  .action-btn{padding:8px 11px;font-size:13px;margin-left:0;margin-right:5px}
 
-  .form-card{padding:18px 16px;border-radius:14px}
-  .form-grid{grid-template-columns:1fr;gap:14px}
+  .form-card{padding:16px 14px;border-radius:13px}
+  .form-grid{grid-template-columns:1fr;gap:13px}
   .full-col{grid-column:auto}
-  .form-group label{font-size:12.5px}
+  .form-group label{font-size:12px}
   .form-group input,.form-group select{min-height:48px;font-size:15px;padding:13px 14px}
   .actions{justify-content:stretch;margin-top:8px}
   .actions .btn{width:100%;padding:14px;font-size:14.5px}
 
   .report-summary{grid-template-columns:1fr;gap:10px}
 
-  .modal{padding:14px;align-items:flex-start;padding-top:30px}
-  .modal-card{padding:20px 18px;border-radius:16px}
+  .modal{padding:14px;align-items:flex-start;padding-top:24px}
+  .modal-card{padding:20px 16px;border-radius:16px}
   .modal-card h3{font-size:16px}
   .modal-actions{flex-direction:column-reverse;gap:8px}
   .modal-actions .btn{width:100%}
 
   .confirm-card{padding:22px 18px;border-radius:18px;max-width:100%}
   .confirm-icon{width:52px;height:52px;font-size:24px;margin-bottom:14px}
-  .confirm-card h3{font-size:16.5px}
-  .confirm-card p{font-size:13px;margin-bottom:20px}
+  .confirm-card h3{font-size:16px}
+  .confirm-card p{font-size:12.5px;margin-bottom:20px}
   .confirm-actions{gap:8px}
-  .confirm-actions .btn{min-height:48px;font-size:14px}
+  .confirm-actions .btn{min-height:48px;font-size:13.5px}
 
   .data-banner{flex-direction:column;align-items:stretch;gap:9px;font-size:12px}
   .data-banner button{width:100%}
-  .toast{right:14px;left:14px;bottom:16px;text-align:center;font-size:13.5px;padding:14px 16px}
+  .toast{right:12px;left:12px;bottom:14px;text-align:center;font-size:13px;padding:13px 15px}
 
-  .kasir-header{padding:14px !important;gap:10px !important;margin-bottom:12px !important;flex-direction:column;align-items:stretch}
-  .kasir-header h2{font-size:16px !important;margin:0 0 3px !important;line-height:1.25}
-  .kasir-header p{font-size:11px !important;line-height:1.4;margin-bottom:4px}
-  .kasir-header > div:last-child{width:100%;display:grid !important;grid-template-columns:1fr 1fr;gap:8px !important}
-  #addMenuBtn{font-size:12.5px !important;min-height:40px !important;padding:8px 12px !important;width:100%}
-  .mode-switch{width:100% !important;padding:3px !important;display:flex}
-  .mode-btn{flex:1;padding:9px 8px !important;font-size:12.5px !important;gap:4px !important;justify-content:center}
+  /* ====== KASIR MOBILE ====== */
+  .kasir-header{padding:14px 14px 12px;gap:10px;margin-bottom:12px;flex-direction:column;align-items:stretch;border-radius:14px}
+  .kasir-header h2{font-size:15.5px;margin:0 0 3px;line-height:1.25;gap:6px}
+  .kasir-header p{font-size:10.5px;line-height:1.4;margin-bottom:6px}
+  .kasir-header > div:last-child{width:100%;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  #addMenuBtn{font-size:12px;min-height:42px;padding:8px 12px;width:100%;border-radius:10px}
+  .mode-switch{width:100%;padding:3px;display:flex;border-radius:10px}
+  .mode-btn{flex:1;padding:9px 8px;font-size:12px;gap:4px;justify-content:center;border-radius:8px}
 
-  .kasir-tabs{gap:6px !important;padding-bottom:10px !important;margin-bottom:12px !important;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}
-  .kasir-tab{padding:9px 13px !important;font-size:12.5px !important;border-radius:10px !important;scroll-snap-align:start;gap:5px !important}
-  .kasir-tab .count{font-size:10px !important;padding:1px 6px !important;min-width:18px !important}
+  .kasir-tabs{gap:6px;padding-bottom:10px;margin-bottom:12px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}
+  .kasir-tab{padding:9px 13px;font-size:12px;border-radius:10px;scroll-snap-align:start;gap:5px}
+  .kasir-tab .count{font-size:9.5px;padding:1px 6px;min-width:18px}
 
-  .kasir-grid{grid-template-columns:repeat(2,1fr) !important;gap:9px !important}
-  .prod-card{padding:12px 11px !important;min-height:96px !important;border-radius:12px !important;gap:6px !important}
-  .prod-card .pc-cat{font-size:8.5px !important;margin-bottom:4px !important;letter-spacing:.05em}
-  .prod-card .pc-name{font-size:12.5px !important;line-height:1.25 !important;margin-bottom:6px !important;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;word-break:break-word;hyphens:auto}
-  .prod-card .pc-price{font-size:14px !important;font-weight:850 !important}
-  .prod-card .pc-badge{top:7px !important;right:7px !important;font-size:10px !important;padding:2px 7px !important;min-width:20px !important;box-shadow:0 3px 8px #dc262630 !important}
+  .kasir-grid{grid-template-columns:repeat(2,1fr);gap:8px}
+  .prod-card{padding:11px 10px;min-height:92px;border-radius:12px;gap:5px}
+  .prod-card .pc-cat{font-size:8.5px;margin-bottom:3px}
+  .prod-card .pc-name{font-size:12px;line-height:1.25;margin-bottom:5px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;word-break:break-word}
+  .prod-card .pc-price{font-size:13.5px;font-weight:850}
+  .prod-card .pc-badge{top:6px;right:6px;font-size:9.5px;padding:2px 7px;min-width:20px;box-shadow:0 3px 8px #dc262630}
 
   .kasir-cart{
-    position:fixed !important;left:0;right:0;bottom:0;top:auto !important;max-height:85vh;width:100%;
+    position:fixed;left:0;right:0;bottom:0;top:auto;max-height:88vh;width:100%;
     border-radius:22px 22px 0 0;z-index:9990;transform:translateY(110%);
     transition:transform .3s cubic-bezier(.4,0,.2,1);
     box-shadow:0 -10px 40px #0f172a26;overflow:hidden;display:flex;flex-direction:column;
@@ -532,52 +535,78 @@ button{cursor:pointer;touch-action:manipulation}
   }
   .kasir-cart::before{content:"";display:block;width:38px;height:4px;background:#cbd5e1;border-radius:99px;margin:6px auto 0;flex:none}
   .kasir-cart.open{transform:translateY(0)}
-  .cart-head{padding:10px 18px 14px !important;border-bottom:1px solid var(--border);flex:none}
-  .cart-head h3{font-size:16px !important;font-weight:850}
-  .cart-body{max-height:none !important;flex:1;padding:12px 18px !important;overflow-y:auto;-webkit-overflow-scrolling:touch}
-  .cart-foot{padding:14px 18px 20px !important;padding-bottom:calc(20px + env(safe-area-inset-bottom,0px)) !important;background:#fff;border-top:1px solid var(--border);flex:none}
-  .cart-foot .btn{padding:15px !important;font-size:16px !important;min-height:52px !important;border-radius:14px !important}
-  .cart-item{padding:12px 0 !important;gap:12px !important}
-  .ci-name{font-size:13px !important}
-  .ci-meta{font-size:11px !important;margin-bottom:4px !important}
-  .ci-price{font-size:11.5px !important}
-  .ci-qty{gap:8px !important}
-  .ci-btn{width:34px !important;height:34px !important;font-size:18px !important;border-radius:9px !important}
-  .ci-qty-val{font-size:15px !important;min-width:26px !important}
+  .cart-head{padding:10px 16px 14px;border-bottom:1px solid var(--border);flex:none}
+  .cart-head h3{font-size:15.5px;font-weight:850}
+  .cart-body{max-height:none;flex:1;padding:12px 16px;overflow-y:auto;-webkit-overflow-scrolling:touch}
+  .cart-foot{padding:14px 16px;padding-bottom:calc(16px + env(safe-area-inset-bottom,0px));background:#fff;border-top:1px solid var(--border);flex:none}
+  .cart-foot .btn{padding:15px;font-size:15.5px;min-height:52px;border-radius:14px}
+  .cart-item{padding:11px 0;gap:10px}
+  .ci-name{font-size:12.5px}
+  .ci-meta{font-size:10.5px;margin-bottom:3px}
+  .ci-price{font-size:11px}
+  .ci-qty{gap:7px}
+  .ci-btn{width:34px;height:34px;font-size:18px;border-radius:9px}
+  .ci-qty-val{font-size:15px;min-width:24px}
 
   .cart-overlay{display:block;position:fixed;inset:0;background:#0f172a99;z-index:9980;opacity:0;pointer-events:none;transition:opacity .25s;backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px)}
   .cart-overlay.show{opacity:1;pointer-events:auto}
 
   .cart-float{
-    display:none;position:fixed;left:14px;right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));
-    z-index:9970;background:linear-gradient(135deg,#dc2626,#b91c1c);color:#fff;border:0;border-radius:16px;
-    padding:14px 18px;box-shadow:0 10px 30px #dc262640;align-items:center;justify-content:space-between;
+    display:none;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));
+    z-index:9970;background:linear-gradient(135deg,#dc2626,#b91c1c);color:#fff;border:0;border-radius:15px;
+    padding:13px 16px;box-shadow:0 10px 30px #dc262640;align-items:center;justify-content:space-between;
     gap:10px;cursor:pointer;font-weight:800;transition:transform .15s;font-size:14px;text-align:left;
   }
   .cart-float:active{transform:scale(.97)}
   .cart-float.show{display:flex}
   .cart-float .cf-left{display:flex;align-items:center;gap:10px;min-width:0}
   .cart-float .cf-badge{background:#fff;color:#dc2626;font-size:12px;font-weight:900;min-width:24px;height:24px;border-radius:99px;display:grid;place-items:center;padding:0 7px;flex:none}
-  .cart-float .cf-label{font-size:14px;text-align:left;line-height:1.1;font-weight:800}
-  .cart-float .cf-label small{display:block;font-size:10.5px;opacity:.85;font-weight:600;margin-top:2px;text-transform:uppercase;letter-spacing:.05em}
-  .cart-float .cf-total{font-size:17px;font-weight:850;letter-spacing:-.3px;white-space:nowrap;flex:none}
+  .cart-float .cf-label{font-size:13.5px;text-align:left;line-height:1.1;font-weight:800}
+  .cart-float .cf-label small{display:block;font-size:10px;opacity:.85;font-weight:600;margin-top:2px;text-transform:uppercase;letter-spacing:.05em}
+  .cart-float .cf-total{font-size:16.5px;font-weight:850;letter-spacing:-.3px;white-space:nowrap;flex:none}
 
-  .kasir-main{padding-bottom:90px}
+  .kasir-main{padding-bottom:85px}
+
+  /* Modal produk & pay di HP */
+  .prod-modal-card,.pay-card,.struk-card{padding:20px 16px;border-radius:18px;max-height:92vh}
+  .pm-header h3{font-size:17px;margin-bottom:3px}
+  .pm-header .pm-price{font-size:13px}
+  .pm-section{margin-bottom:16px}
+  .pm-section h4{font-size:11.5px;margin-bottom:8px}
+  .kuah-opt{padding:11px 8px;font-size:12.5px}
+  .pm-qty{padding:11px 14px;margin-bottom:16px}
+  .pm-qty-ctrl button{width:38px;height:38px}
+  .pm-actions,.pay-actions,.struk-actions{grid-template-columns:1fr;gap:8px}
+  .pm-actions .btn,.pay-actions .btn,.struk-actions .btn{min-height:50px;font-size:14.5px;padding:14px}
+
+  .pay-total-box{padding:16px;margin:14px 0 16px;border-radius:13px}
+  .pay-total-box .pt-value{font-size:26px}
+  .method-opt{padding:12px 4px;font-size:12px}
+  .pay-input{font-size:18px !important;min-height:56px !important;padding:14px 12px 14px 38px !important}
+  .pay-quick{grid-template-columns:repeat(3,1fr);gap:6px}
+  .pay-quick .btn{padding:9px 6px;font-size:12px;min-height:40px}
+  .kembalian-box{padding:12px 14px;margin-bottom:16px}
+  .kembalian-box .kb-value{font-size:18px}
+
+  .struk-preview{font-size:10.5px;padding:14px 12px;max-height:42vh}
+
+  /* Modal tambah menu manual */
+  #addMenuModal .prod-modal-card{padding:20px 16px}
 }
 @media(max-width:430px){
   .cards-main,.cards-biz{grid-template-columns:1fr}
   .hero-today{grid-template-columns:1fr 1fr;gap:8px}
-  .hero-card{padding:12px 13px}
-  .hero-card .h-value{font-size:15px}
-  .topbar h1{font-size:17px}
-  .main{padding:14px 12px 36px}
+  .hero-card{padding:11px 12px}
+  .hero-card .h-value{font-size:14.5px}
+  .topbar h1{font-size:16.5px}
+  .main{padding:12px 10px 36px}
   .tx-filters{grid-template-columns:1fr}
   .login-left{padding:24px 18px;padding-top:40px}
-  .login-title{font-size:23px}
-  .kasir-grid{grid-template-columns:repeat(2,1fr);gap:8px}
-  .prod-card{padding:11px;min-height:92px}
-  .prod-card .pc-name{font-size:12px}
-  .prod-card .pc-price{font-size:13.5px}
+  .login-title{font-size:22px}
+  .kasir-grid{grid-template-columns:repeat(2,1fr);gap:7px}
+  .prod-card{padding:10px;min-height:88px}
+  .prod-card .pc-name{font-size:11.5px}
+  .prod-card .pc-price{font-size:13px}
 }
 @media(max-width:360px){
   .hero-today{grid-template-columns:1fr}
@@ -725,7 +754,7 @@ button{cursor:pointer;touch-action:manipulation}
     <button data-page="statistik">📈 &nbsp; Statistik</button>
     <button class="logout" id="logoutBtn">↪ &nbsp; Keluar</button>
   </div>
-  <div class="sidebar-footer">Sistem Keuangan<br>Warnet & Warung Seblak<br><br>v4.3</div>
+  <div class="sidebar-footer">Sistem Keuangan<br>Warnet & Warung Seblak<br><br>v4.4</div>
 </aside>
 <div class="overlay" id="overlay"></div>
 
@@ -801,11 +830,11 @@ button{cursor:pointer;touch-action:manipulation}
   <section id="kasir" class="section">
     <div class="kasir-header">
       <div>
-        <h2>🔥 Kasir Seblak Teh Neneng</h2>
-        <p>Tap menu untuk menambah pesanan · Klik produk di keranjang untuk ubah qty</p>
+        <h2>Kasir Seblak Teh Neneng</h2>
+        <p>Tap menu untuk menambah pesanan</p>
       </div>
       <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
-        <button class="btn btn-light" id="addMenuBtn" style="font-size:13px;min-height:38px;padding:9px 14px">➕ Tambah Menu</button>
+        <button class="btn btn-light" id="addMenuBtn">➕ Tambah Menu</button>
         <div class="mode-switch" id="modeSwitch">
           <button class="mode-btn active" data-mode="Dine-in">🍽 Dine-in</button>
           <button class="mode-btn" data-mode="Online">📱 Online</button>
@@ -889,7 +918,7 @@ button{cursor:pointer;touch-action:manipulation}
         </div>
       </div>
       <div class="tx-filters">
-        <div class="filter-item"><label>Cari</label><input id="search" placeholder="Cari keterangan, kategori, nominal..."></div>
+        <div class="filter-item"><label>Cari</label><input id="search" placeholder="Cari..."></div>
         <div class="filter-item"><label>Dari Tanggal</label><input id="filterDateStart" type="date"></div>
         <div class="filter-item"><label>Sampai Tanggal</label><input id="filterDateEnd" type="date"></div>
         <div class="filter-item"><label>Usaha</label><select id="filterBusiness"><option value="">Semua Usaha</option><option>Warnet</option><option>Warung Seblak</option><option>Bersama</option></select></div>
@@ -970,17 +999,18 @@ button{cursor:pointer;touch-action:manipulation}
   <div class="prod-modal-card" id="prodModalCard"></div>
 </div>
 
+<!-- MODAL TAMBAH MENU MANUAL (dengan kategori custom) -->
 <div id="addMenuModal" class="prod-modal">
   <div class="prod-modal-card">
     <div class="pm-header">
       <div class="pm-cat">Menu Baru</div>
       <h3>Tambah Menu Manual</h3>
-      <div class="pm-price">Untuk menu dadakan / tidak ada di daftar</div>
+      <div class="pm-price">Untuk menu baru / dadakan</div>
     </div>
 
     <div class="pm-section">
       <h4>Nama Menu</h4>
-      <input id="amName" type="text" placeholder="Contoh: Seblak Spesial Telur" style="width:100%;padding:12px;border:1.5px solid var(--border);border-radius:10px;font-size:14px;min-height:46px">
+      <input id="amName" type="text" placeholder="Contoh: Ayam Geprek" style="width:100%;padding:12px;border:1.5px solid var(--border);border-radius:10px;font-size:14px;min-height:46px">
     </div>
 
     <div class="pm-section">
@@ -1001,15 +1031,19 @@ button{cursor:pointer;touch-action:manipulation}
 
     <div class="pm-section">
       <h4>Kategori</h4>
-      <select id="amCategory" style="width:100%;padding:12px 38px 12px 14px;border:1.5px solid var(--border);border-radius:10px;font-size:14px;min-height:46px;background-image:url(&quot;data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2374809a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'/></svg>&quot;);background-repeat:no-repeat;background-position:right 13px center;background-size:16px;-webkit-appearance:none;appearance:none">
-        <option value="Seblak">Seblak</option>
-        <option value="Lumpia">Lumpia</option>
-        <option value="Spaghetti">Spaghetti</option>
-        <option value="Mie Jebew">Mie Jebew</option>
-        <option value="Cemilan">Cemilan</option>
-        <option value="Minuman">Minuman</option>
-        <option value="Lainnya">Lainnya</option>
-      </select>
+      <div id="amCategoryWrap">
+        <select id="amCategory" style="width:100%;padding:12px 38px 12px 14px;border:1.5px solid var(--border);border-radius:10px;font-size:14px;min-height:46px;background-image:url(&quot;data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2374809a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'/></svg>&quot;);background-repeat:no-repeat;background-position:right 13px center;background-size:16px;-webkit-appearance:none;appearance:none">
+          <!-- akan di-populate JS -->
+        </select>
+        <button type="button" class="btn btn-light" id="amAddCatBtn" style="width:100%;margin-top:8px;font-size:12.5px;min-height:42px">+ Kategori Baru</button>
+      </div>
+      <div id="amNewCatWrap" class="hidden" style="margin-top:8px">
+        <div style="display:grid;grid-template-columns:1fr auto;gap:8px">
+          <input id="amNewCat" type="text" placeholder="Nama kategori baru" style="padding:12px;border:1.5px solid var(--border);border-radius:10px;font-size:14px;min-height:46px">
+          <button type="button" class="btn btn-seblak" id="amSaveCatBtn" style="min-height:46px;padding:0 16px">OK</button>
+        </div>
+        <button type="button" class="btn btn-ghost" id="amCancelCatBtn" style="width:100%;margin-top:6px;font-size:12px;min-height:38px">Batal</button>
+      </div>
     </div>
 
     <div class="pm-actions" style="grid-template-columns:1fr">
@@ -1079,7 +1113,6 @@ button{cursor:pointer;touch-action:manipulation}
 </div>
 
 <div id="strukPrint"></div>
-
 <div id="toast" class="toast"></div>
 <div id="printArea"></div>
 
@@ -1191,7 +1224,7 @@ let transactions=(JSON.parse(localStorage.getItem("demoTransactions")||"[]")).ma
 let dashboardChart,businessChart,expenseChart,statChart1,statChart2;
 let currentUser={nama:"Admin",role:"admin"};
 
-const titles={dashboard:"Selamat Datang, Admin 👋",kasir:"🔥 Kasir Seblak Teh Neneng",pemasukan:"Tambah Pemasukan",pengeluaran:"Tambah Pengeluaran",transaksi:"Riwayat Transaksi",laporan:"Laporan Keuangan",statistik:"Statistik"};
+const titles={dashboard:"Selamat Datang, Admin 👋",kasir:"Kasir Seblak Teh Neneng",pemasukan:"Tambah Pemasukan",pengeluaran:"Tambah Pengeluaran",transaksi:"Riwayat Transaksi",laporan:"Laporan Keuangan",statistik:"Statistik"};
 
 function attachCurrencyFormatting(el){
   const reformat=()=>{
@@ -1668,6 +1701,7 @@ var currentCategory="Semua";
 var currentMode="Dine-in";
 var selectedPayMethod="Tunai";
 var lastStrukData=null;
+var customCategories=[]; // kategori custom yang ditambah user
 
 async function loadProducts(){
   const grid=document.getElementById("kasirGrid");
@@ -1696,8 +1730,15 @@ function renderKasir(){
   renderCart();
 }
 
+function getAllCategories(){
+  // Gabungkan kategori dari produk + kategori custom
+  const set=new Set(products.map(p=>p.kategori));
+  customCategories.forEach(c=>set.add(c));
+  return [...set];
+}
+
 function renderTabs(){
-  const cats=["Semua",...new Set(products.map(p=>p.kategori))];
+  const cats=["Semua",...getAllCategories()];
   const el=document.getElementById("kasirTabs");
   el.innerHTML=cats.map(c=>{
     const count=c==="Semua"?products.length:products.filter(p=>p.kategori===c).length;
@@ -1733,6 +1774,7 @@ function renderProducts(){
 function handleProductTap(id){
   const p=products.find(x=>x.id===id);
   if(!p) return;
+  // Modal selalu muncul untuk produk apa saja, biar bisa ubah harga
   if(p.nama.toLowerCase().includes("prasmanan")){
     openProdModal(p,{withTopping:true,withKuah:true});
     return;
@@ -2164,7 +2206,8 @@ function buildStrukHTML(data){
   const tglFmt=new Intl.DateTimeFormat("id-ID",{day:"2-digit",month:"2-digit",year:"numeric"}).format(data.waktu);
   const jamFmt=String(data.waktu.getHours()).padStart(2,"0")+":"+String(data.waktu.getMinutes()).padStart(2,"0");
 
-  lines.push(`<span class="center big">🔥 SEBLAK TEH NENENG</span>`);
+  // Header tanpa emoji api
+  lines.push(`<span class="center big">SEBLAK TEH NENENG</span>`);
   lines.push(`<span class="center" style="font-size:10px;font-style:italic">Klasik Rasanya, Ikonik Pedasnya</span>`);
   lines.push(`<span class="divider"></span>`);
   lines.push(`<span class="center" style="font-size:10px">Leuwigajah, Cimahi Selatan</span>`);
@@ -2264,12 +2307,24 @@ document.addEventListener("keydown",e=>{
 });
 
 /* ============================================================
-   TAMBAH MENU MANUAL
+   TAMBAH MENU MANUAL (dengan kategori custom)
 ============================================================ */
+function populateCategorySelect(){
+  const sel=document.getElementById("amCategory");
+  const cats=getAllCategories();
+  sel.innerHTML=cats.map(c=>`<option value="${esc(c)}">${esc(c)}</option>`).join("");
+  if(currentCategory && currentCategory!=="Semua"){
+    sel.value=currentCategory;
+  }
+}
+
 document.getElementById("addMenuBtn").onclick=()=>{
   document.getElementById("amName").value="";
   document.getElementById("amPrice").value="";
-  document.getElementById("amCategory").value="Seblak";
+  document.getElementById("amNewCat").value="";
+  document.getElementById("amNewCatWrap").classList.add("hidden");
+  document.getElementById("amCategoryWrap").classList.remove("hidden");
+  populateCategorySelect();
   document.getElementById("addMenuModal").classList.add("show");
   setTimeout(()=>document.getElementById("amName").focus(),100);
 };
@@ -2296,12 +2351,40 @@ document.querySelectorAll("#addMenuModal [data-am]").forEach(b=>{
   };
 });
 
+/* Kategori Baru */
+document.getElementById("amAddCatBtn").onclick=()=>{
+  document.getElementById("amCategoryWrap").classList.add("hidden");
+  document.getElementById("amNewCatWrap").classList.remove("hidden");
+  setTimeout(()=>document.getElementById("amNewCat").focus(),100);
+};
+document.getElementById("amCancelCatBtn").onclick=()=>{
+  document.getElementById("amNewCatWrap").classList.add("hidden");
+  document.getElementById("amCategoryWrap").classList.remove("hidden");
+};
+document.getElementById("amSaveCatBtn").onclick=()=>{
+  const newCat=document.getElementById("amNewCat").value.trim();
+  if(!newCat){showToast("Nama kategori harus diisi");return}
+  const existing=getAllCategories();
+  if(existing.some(c=>c.toLowerCase()===newCat.toLowerCase())){
+    showToast("Kategori sudah ada");
+    return;
+  }
+  customCategories.push(newCat);
+  renderTabs();
+  populateCategorySelect();
+  document.getElementById("amCategory").value=newCat;
+  document.getElementById("amNewCatWrap").classList.add("hidden");
+  document.getElementById("amCategoryWrap").classList.remove("hidden");
+  showToast("Kategori '"+newCat+"' ditambahkan");
+};
+
 function getManualMenuData(){
   const nama=document.getElementById("amName").value.trim();
   const harga=parseNominal(document.getElementById("amPrice").value);
   const kategori=document.getElementById("amCategory").value;
   if(!nama){showToast("Nama menu harus diisi");return null}
   if(harga<1){showToast("Harga harus diisi");return null}
+  if(!kategori){showToast("Kategori harus dipilih");return null}
   return {nama,harga,kategori};
 }
 
@@ -2317,6 +2400,10 @@ document.getElementById("amAddOnce").onclick=()=>{
     aktif:true,
     _manual:true
   };
+  // Tambah ke products supaya muncul di tab kategori
+  products.push(tempProduct);
+  renderTabs();
+  renderProducts();
   addToCart(tempProduct);
   document.getElementById("addMenuModal").classList.remove("show");
   showToast(data.nama+" ditambah ke keranjang");
@@ -2343,6 +2430,9 @@ document.getElementById("amSave").onclick=async()=>{
         kategori: data.kategori,
         aktif:true
       };
+      products.push(newProduct);
+      renderTabs();
+      renderProducts();
       addToCart(newProduct);
       setTimeout(()=>loadProducts(),800);
     } else {
@@ -2355,6 +2445,9 @@ document.getElementById("amSave").onclick=async()=>{
         aktif:true,
         _manual:true
       };
+      products.push(tempProduct);
+      renderTabs();
+      renderProducts();
       addToCart(tempProduct);
       showToast("Mode offline: hanya ke keranjang");
     }
