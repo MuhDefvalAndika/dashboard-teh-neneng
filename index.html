@@ -245,7 +245,6 @@ button{cursor:pointer;touch-action:manipulation}
 ============================================================ */
 .kasir-wrap{display:grid;grid-template-columns:1fr 400px;gap:18px;align-items:start}
 .kasir-main{min-width:0}
-
 .kasir-header{background:#fff;border:1px solid var(--border);border-radius:17px;padding:18px 22px;margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;box-shadow:0 5px 22px #17233d08}
 .kasir-header h2{margin:0 0 3px;font-size:20px;font-weight:850;display:flex;align-items:center;gap:9px}
 .kasir-header p{margin:0;color:var(--muted);font-size:12px}
@@ -274,7 +273,6 @@ button{cursor:pointer;touch-action:manipulation}
 .prod-loading .spinner{width:36px;height:36px;border:3px solid var(--border);border-top-color:var(--seblak);border-radius:50%;margin:0 auto 14px;animation:spin 0.8s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 
-/* KERANJANG */
 .kasir-cart{background:#fff;border:1px solid var(--border);border-radius:17px;display:flex;flex-direction:column;position:sticky;top:16px;height:fit-content;max-height:calc(100vh - 60px);box-shadow:0 12px 32px #17233d10;overflow:hidden}
 .cart-head{padding:16px 18px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
 .cart-head h3{margin:0;font-size:15px;font-weight:850;display:flex;align-items:center;gap:8px}
@@ -296,16 +294,14 @@ button{cursor:pointer;touch-action:manipulation}
 .ci-btn.minus{color:#dc2626}
 .ci-btn.plus{color:#16a34a}
 .ci-qty-val{font-size:13.5px;font-weight:800;min-width:24px;text-align:center}
-
 .cart-foot{border-top:1px solid var(--border);padding:16px 18px;background:#fafbfd}
 .cf-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;font-size:13px}
 .cf-row.total{font-size:20px;font-weight:850;color:var(--seblak);margin:12px 0 14px;padding-top:12px;border-top:2px dashed var(--border);letter-spacing:-.4px}
 .cf-label{color:var(--muted);font-weight:650}
 .cart-foot .btn{width:100%;padding:15px;font-size:15px;border-radius:12px;font-weight:800;letter-spacing:.2px}
 .cart-foot .btn:disabled{opacity:.5;cursor:not-allowed}
-.cart-foot .btn-ghost{margin-top:8px;background:transparent;border:1px dashed var(--border);color:var(--muted);padding:10px;font-size:12.5px}
 
-/* MODAL PRODUK (kuah & topping) */
+/* MODAL PRODUK */
 .prod-modal{position:fixed;inset:0;background:#0f172acc;display:none;align-items:center;justify-content:center;padding:16px;z-index:9999;backdrop-filter:blur(3px)}
 .prod-modal.show{display:flex;animation:fadeIn .15s}
 .prod-modal-card{background:#fff;border-radius:20px;width:100%;max-width:440px;padding:22px;box-shadow:0 30px 80px #0006;max-height:90vh;overflow-y:auto;animation:popIn .2s}
@@ -370,7 +366,7 @@ button{cursor:pointer;touch-action:manipulation}
 .pay-actions{display:grid;grid-template-columns:1fr 1.4fr;gap:10px}
 .pay-actions .btn{padding:15px;font-size:15px;border-radius:12px;min-height:52px;font-weight:800}
 
-/* STRUK PREVIEW */
+/* STRUK */
 .struk-modal{position:fixed;inset:0;background:#0f172acc;display:none;align-items:center;justify-content:center;padding:16px;z-index:9999;backdrop-filter:blur(3px)}
 .struk-modal.show{display:flex;animation:fadeIn .15s}
 .struk-card{background:#fff;border-radius:20px;width:100%;max-width:400px;padding:22px;box-shadow:0 30px 80px #0006;max-height:90vh;overflow-y:auto;animation:popIn .2s}
@@ -384,9 +380,23 @@ button{cursor:pointer;touch-action:manipulation}
 .struk-actions{display:grid;grid-template-columns:1fr 1.2fr;gap:10px}
 .struk-actions .btn{padding:14px;font-size:14px;border-radius:12px;min-height:48px}
 
-/* ============================================================
-   RESPONSIVE
-============================================================ */
+/* PRINT AREA */
+#printHeader{display:none}
+#printArea{position:fixed;left:-99999px;top:0;width:900px;background:#fff;padding:30px;font-family:Inter,Arial,sans-serif;color:#17233d}
+#printArea h1{font-size:22px;margin:0 0 4px}
+#printArea .pa-sub{font-size:12px;color:#555;margin:0 0 20px}
+#printArea h2{font-size:15px;margin:22px 0 10px;border-bottom:2px solid #2563eb;padding-bottom:6px}
+#printArea table{width:100%;border-collapse:collapse;font-size:11px;margin-bottom:14px}
+#printArea th,#printArea td{border:1px solid #ccc;padding:6px 8px;text-align:left}
+#printArea th{background:#f1f5f9}
+#printArea .pa-summary{display:flex;gap:10px;margin-bottom:18px}
+#printArea .pa-box{flex:1;border:1px solid #ccc;border-radius:8px;padding:10px}
+#printArea .pa-box span{display:block;font-size:10px;color:#666;text-transform:uppercase;letter-spacing:.05em}
+#printArea .pa-box strong{font-size:16px;display:block;margin-top:4px}
+
+#strukPrint{display:none}
+
+/* RESPONSIVE */
 @media(max-width:1200px){
   .kasir-wrap{grid-template-columns:1fr 340px}
   .grid3{grid-template-columns:1fr 1fr}
@@ -395,9 +405,7 @@ button{cursor:pointer;touch-action:manipulation}
   .cards-biz{grid-template-columns:repeat(2,minmax(0,1fr))}
   .tx-filters{grid-template-columns:1fr 1fr 1fr}
 }
-@media(max-width:1100px){
-  .hero-today{grid-template-columns:repeat(2,1fr)}
-}
+@media(max-width:1100px){.hero-today{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:1000px){
   .kasir-wrap{grid-template-columns:1fr}
   .kasir-cart{position:relative;top:0;max-height:none}
@@ -498,7 +506,6 @@ button{cursor:pointer;touch-action:manipulation}
   .data-banner button{width:100%}
   .toast{right:14px;left:14px;bottom:16px;text-align:center;font-size:13.5px;padding:14px 16px}
 
-  /* KASIR MOBILE */
   .kasir-header{padding:14px 16px;flex-direction:column;align-items:stretch;gap:12px}
   .kasir-header h2{font-size:17px}
   .mode-switch{width:100%}
@@ -572,12 +579,7 @@ button{cursor:pointer;touch-action:manipulation}
   #printHeader h1{margin:0 0 6px;font-size:22px}
   #printHeader p{margin:0;color:#555;font-size:12px}
 }
-#printHeader{display:none}
 
-/* ============================================================
-   PRINT STRUK 58MM
-============================================================ */
-#strukPrint{display:none}
 @media print{
   body.struk-printing *{visibility:hidden!important}
   body.struk-printing #strukPrint,body.struk-printing #strukPrint *{visibility:visible!important}
@@ -600,7 +602,7 @@ button{cursor:pointer;touch-action:manipulation}
 </head>
 <body>
 
-<!-- ================= LOGIN ================= -->
+<!-- LOGIN -->
 <div id="loginPage" class="login">
   <div class="login-left">
     <div class="login-form-wrap">
@@ -665,7 +667,7 @@ button{cursor:pointer;touch-action:manipulation}
   </div>
 </div>
 
-<!-- ================= APP ================= -->
+<!-- APP -->
 <div id="app" class="app hidden">
 <aside id="sidebar" class="sidebar">
   <div class="brand"><div class="brand-icon">KS</div><div>Keuangan<small>Warnet & Seblak</small></div></div>
@@ -883,7 +885,7 @@ button{cursor:pointer;touch-action:manipulation}
 </main>
 </div>
 
-<!-- ============== MODAL EDIT ============== -->
+<!-- MODAL EDIT -->
 <div id="editModal" class="modal">
   <div class="modal-card">
     <h3>Edit Transaksi</h3>
@@ -905,7 +907,7 @@ button{cursor:pointer;touch-action:manipulation}
   </div>
 </div>
 
-<!-- ============== MODAL KONFIRMASI ============== -->
+<!-- MODAL KONFIRMASI -->
 <div id="confirmModal" class="confirm-modal">
   <div class="confirm-card">
     <div class="confirm-icon" id="confirmIcon">⚠️</div>
@@ -918,12 +920,12 @@ button{cursor:pointer;touch-action:manipulation}
   </div>
 </div>
 
-<!-- ============== MODAL PRODUK (KASAIR) ============== -->
+<!-- MODAL PRODUK -->
 <div id="prodModal" class="prod-modal">
   <div class="prod-modal-card" id="prodModalCard"></div>
 </div>
 
-<!-- ============== MODAL BAYAR ============== -->
+<!-- MODAL BAYAR -->
 <div id="payModal" class="pay-modal">
   <div class="pay-card">
     <h3>💰 Pembayaran</h3>
@@ -969,7 +971,7 @@ button{cursor:pointer;touch-action:manipulation}
   </div>
 </div>
 
-<!-- ============== MODAL STRUK ============== -->
+<!-- MODAL STRUK -->
 <div id="strukModal" class="struk-modal">
   <div class="struk-card">
     <h3>✅ Transaksi Berhasil</h3>
@@ -981,7 +983,6 @@ button{cursor:pointer;touch-action:manipulation}
   </div>
 </div>
 
-<!-- Print area struk (tersembunyi sampai window.print()) -->
 <div id="strukPrint"></div>
 
 <div id="toast" class="toast"></div>
@@ -993,7 +994,6 @@ button{cursor:pointer;touch-action:manipulation}
 ============================================================ */
 const API_URL="https://script.google.com/macros/s/AKfycbyeVwEd0FuEV_dd0ROpzcX6Z8U4SBFKJilUbexoSuJUQB_skvVH55Q7XDXUNjP48BZRpg/exec";
 
-/* UTIL TANGGAL */
 function localISO(d){const y=d.getFullYear(),m=String(d.getMonth()+1).padStart(2,"0"),day=String(d.getDate()).padStart(2,"0");return `${y}-${m}-${day}`}
 const today=()=>localISO(new Date());
 function lastNDays(n){const arr=[],now=new Date();for(let i=n-1;i>=0;i--){const d=new Date(now);d.setDate(d.getDate()-i);arr.push(localISO(d))}return arr}
@@ -1026,7 +1026,6 @@ const digits=v=>String(v??"").replace(/\D/g,"");
 const formatNominal=v=>{const d=digits(v);return d?Number(d).toLocaleString("id-ID"):""};
 const nominalNumber=v=>parseNominal(v);
 
-/* TOAST */
 let toastTimer=null;
 function showToast(m){
   const t=document.getElementById("toast");
@@ -1037,7 +1036,6 @@ function showToast(m){
   toastTimer=setTimeout(()=>t.classList.remove("show"),2400);
 }
 
-/* CONFIRM */
 let confirmResolver=null;
 function showConfirm({title="Yakin?",message="",yesText="Ya",noText="Batal",type="danger"}={}){
   return new Promise(resolve=>{
@@ -1069,11 +1067,10 @@ document.addEventListener("keydown",e=>{if(e.key==="Escape") closeConfirm(false)
 const useApi=()=>API_URL && !API_URL.startsWith("GANTI_");
 async function api(action,data={}){
   if(!useApi())return null;
-  const res=await fetch(API_URL,{method:"POST",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify({action,...data})});
+  const res=await fetch(API_URL,{method:"POST",headers:{"Content-Type":"text/plain"},body:JSON.stringify({action,...data})});
   return await res.json();
 }
 
-/* NORMALISASI */
 function pickField(obj,names){
   for(const n of names) if(obj[n]!==undefined && obj[n]!==null && obj[n]!=="") return obj[n];
   const norm=s=>String(s).toLowerCase().replace(/[^a-z0-9]/g,"");
@@ -1121,6 +1118,7 @@ document.getElementById("datePill").textContent=new Intl.DateTimeFormat("id-ID",
 document.getElementById("todayLabel").textContent="("+new Intl.DateTimeFormat("id-ID",{dateStyle:"long"}).format(new Date())+")";
 document.getElementById("inDate").value=today();
 document.getElementById("outDate").value=today();
+document.getElementById("loginYear").textContent=new Date().getFullYear();
 
 /* SIDEBAR */
 const sidebarEl=document.getElementById("sidebar");
@@ -1155,8 +1153,6 @@ document.getElementById("loginForm").addEventListener("submit",async e=>{
     sessionStorage.setItem("userRole",currentUser.role);
     const el=document.querySelector(".admin-pill");
     if(el) el.innerHTML=`<div class="avatar">👤</div> ${currentUser.nama}⌄`;
-  } else {
-    currentUser={nama:sessionStorage.getItem("userName")||"Admin",role:sessionStorage.getItem("userRole")||"admin"};
   }
   openApp();
 });
@@ -1164,20 +1160,16 @@ document.getElementById("togglePassword").addEventListener("click",()=>{
   const inp=document.getElementById("password");
   inp.type=inp.type==="password"?"text":"password";
 });
-document.getElementById("loginYear").textContent=new Date().getFullYear();
 
 function openApp(){
   document.getElementById("loginPage").classList.add("hidden");
   document.getElementById("app").classList.remove("hidden");
   loadData();
-  if(sessionStorage.getItem("loggedIn")==="1"){
-    // restore nama user kalau ada
-    const savedName=sessionStorage.getItem("userName");
-    if(savedName){
-      currentUser.nama=savedName;
-      const el=document.querySelector(".admin-pill");
-      if(el) el.innerHTML=`<div class="avatar">👤</div> ${savedName}⌄`;
-    }
+  const savedName=sessionStorage.getItem("userName");
+  if(savedName){
+    currentUser.nama=savedName;
+    const el=document.querySelector(".admin-pill");
+    if(el) el.innerHTML=`<div class="avatar">👤</div> ${savedName}⌄`;
   }
 }
 function logout(){sessionStorage.removeItem("loggedIn");sessionStorage.removeItem("userName");sessionStorage.removeItem("userRole");location.reload()}
@@ -1199,7 +1191,6 @@ function navigate(page){
 document.getElementById("chartRange").addEventListener("change",drawCharts);
 document.getElementById("dashRange").addEventListener("change",renderAll);
 
-/* BANNER */
 function setDataBanner(mode,message){
   const banner=document.getElementById("dataBanner");
   const text=document.getElementById("dataBannerText");
@@ -1213,7 +1204,6 @@ document.getElementById("dataBannerClear").onclick=()=>{
   localStorage.removeItem("demoTransactions");transactions=[];showToast("Cache lokal dihapus");loadData();
 };
 
-/* LOAD DATA */
 async function loadData(){
   if(useApi()){
     try{
@@ -1235,7 +1225,6 @@ async function updateTransactionApi(id,t){
   else{const i=transactions.findIndex(x=>String(x.id)===String(id));if(i>=0){transactions[i]={...transactions[i],...t};saveLocal()}}
 }
 
-/* FORM PEMASUKAN/PENGELUARAN */
 document.getElementById("incomeForm").onsubmit=async e=>{
   e.preventDefault();
   const t={tanggal:inDate.value,usaha:inBusiness.value,jenis:"Pemasukan",kategori:inCategory.value,keterangan:inNote.value,nominal:nominalNumber(inAmount.value),metode:inMethod.value};
@@ -1251,7 +1240,6 @@ document.getElementById("expenseForm").onsubmit=async e=>{
   try{await addTransaction(t);e.target.reset();outDate.value=today();showToast("Pengeluaran berhasil disimpan");loadData()}catch(err){showToast(err.message)}
 };
 
-/* FILTER TRANSAKSI */
 function filtered(){
   const q=document.getElementById("search").value.toLowerCase();
   const b=document.getElementById("filterBusiness").value;
@@ -1316,7 +1304,6 @@ function renderTable(){
    : `<tr><td colspan="9"><div class="empty-state"><div class="icon">📭</div><p>Belum ada transaksi yang cocok dengan filter.</p></div></td></tr>`;
 }
 
-/* HAPUS */
 async function deleteTransaction(id){
   const t=transactions.find(x=>String(x.id)===String(id));
   const info=t ? `${t.tanggal||""} • ${t.usaha||""} • ${rupiah(t.nominal)}` : "";
@@ -1336,7 +1323,6 @@ async function deleteTransaction(id){
   }catch(e){showToast(e.message)}
 }
 
-/* EDIT */
 function openEdit(id){
   const t=transactions.find(x=>String(x.id)===String(id));
   if(!t){showToast("Transaksi tidak ditemukan");return}
@@ -1374,7 +1360,6 @@ document.getElementById("editForm").onsubmit=async e=>{
   }catch(err){showToast(err.message)}
 };
 
-/* TOTALS */
 function totals(list=transactions){
  let inT=0,outT=0,wi=0,si=0,wo=0,so=0;
  list.forEach(t=>{const n=parseNominal(t.nominal);if(t.jenis==="Pemasukan"){inT+=n;if(t.usaha==="Warnet")wi+=n;if(t.usaha==="Warung Seblak")si+=n}else{outT+=n;if(t.usaha==="Warnet")wo+=n;if(t.usaha==="Warung Seblak")so+=n}});
@@ -1475,7 +1460,6 @@ function drawCharts(){
  statChart2=new Chart(document.getElementById("statChart2"),{type:"bar",data:{labels:["Warnet","Seblak"],datasets:[{label:"Pemasukan",data:[x.wi,x.si]},{label:"Pengeluaran",data:[x.wo,x.so]}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:"bottom",labels:{boxWidth:10,font:{size:11}}}},scales:{y:{beginAtZero:true,ticks:{font:{size:10}}},x:{ticks:{font:{size:10}}}}}});
 }
 
-/* LAPORAN */
 document.getElementById("reportBtn").onclick=()=>{
  const a=document.getElementById("reportStart").value,b=document.getElementById("reportEnd").value;
  const list=transactions.filter(t=>(!a||t.tanggal>=a)&&(!b||t.tanggal<=b));
@@ -1586,16 +1570,15 @@ document.getElementById("pdfBtn").onclick=downloadPDF;
 document.getElementById("reportPdfBtn").onclick=downloadPDF;
 
 /* ============================================================
-   ================  KASIR  ================================
+   ============   KASIR   ====================================
 ============================================================ */
-let products=[];
-let cart=[];
-let currentCategory="Semua";
-let currentMode="Dine-in";
-let selectedPayMethod="Tunai";
-let lastStrukData=null;
+var products=[];
+var cart=[];
+var currentCategory="Semua";
+var currentMode="Dine-in";
+var selectedPayMethod="Tunai";
+var lastStrukData=null;
 
-/* Load products */
 async function loadProducts(){
   const grid=document.getElementById("kasirGrid");
   grid.innerHTML=`<div class="prod-loading"><div class="spinner"></div><div>Memuat menu...</div></div>`;
@@ -1617,7 +1600,12 @@ async function loadProducts(){
   }
 }
 
-/* Render kategori tabs */
+function renderKasir(){
+  renderTabs();
+  renderProducts();
+  renderCart();
+}
+
 function renderTabs(){
   const cats=["Semua",...new Set(products.map(p=>p.kategori))];
   const el=document.getElementById("kasirTabs");
@@ -1630,7 +1618,6 @@ function renderTabs(){
   });
 }
 
-/* Render produk */
 function renderProducts(){
   const grid=document.getElementById("kasirGrid");
   const list=currentCategory==="Semua"?products:products.filter(p=>p.kategori===currentCategory);
@@ -1653,25 +1640,20 @@ function renderProducts(){
   });
 }
 
-/* Handle tap produk */
 function handleProductTap(id){
   const p=products.find(x=>x.id===id);
   if(!p) return;
-  // Seblak Prasmanan → modal topping manual
   if(p.nama.toLowerCase().includes("prasmanan")){
-    openProdModal(p,{withTopping:true});
+    openProdModal(p,{withTopping:true,withKuah:true});
     return;
   }
-  // Kategori Seblak (selain prasmanan) → modal pilih kuah
   if(p.kategori==="Seblak"){
     openProdModal(p,{withKuah:true});
     return;
   }
-  // Produk biasa → langsung tambah
   addToCart(p);
 }
 
-/* Tambah ke cart */
 function addToCart(p,extra={}){
   const key=p.id + (extra.kuah?`|${extra.kuah}`:"") + (extra.toppings?`|${extra.toppings.map(t=>t.nama+t.harga).join(",")}`:"");
   const existing=cart.find(c=>c.key===key);
@@ -1692,9 +1674,9 @@ function addToCart(p,extra={}){
     });
   }
   renderCart();
+  renderProducts();
 }
 
-/* Render cart */
 function renderCart(){
   const body=document.getElementById("cartBody");
   const totalQty=cart.reduce((s,c)=>s+c.qty,0);
@@ -1739,7 +1721,6 @@ function renderCart(){
   });
 }
 
-/* Modal produk (kuah & topping) */
 function openProdModal(p,{withKuah=false,withTopping=false}={}){
   const modal=document.getElementById("prodModal");
   const card=document.getElementById("prodModalCard");
@@ -1784,7 +1765,6 @@ function openProdModal(p,{withKuah=false,withTopping=false}={}){
 
   let qty=1;
 
-  // Kuah picker
   if(withKuah){
     card.querySelectorAll(".kuah-opt").forEach(b=>{
       b.onclick=()=>{
@@ -1794,7 +1774,6 @@ function openProdModal(p,{withKuah=false,withTopping=false}={}){
     });
   }
 
-  // Topping
   function renderToppings(){
     const list=card.querySelector("#toppingList");
     list.innerHTML=toppings.map((t,i)=>`
@@ -1835,14 +1814,9 @@ function openProdModal(p,{withKuah=false,withTopping=false}={}){
     card.querySelector("#toppingAddBtn").onclick=()=>{toppings.push({nama:"",harga:0});renderToppings()};
   }
 
-  // Qty
   card.querySelector("#pmQtyMinus").onclick=()=>{qty=Math.max(1,qty-1);card.querySelector("#pmQtyVal").textContent=qty};
   card.querySelector("#pmQtyPlus").onclick=()=>{qty++;card.querySelector("#pmQtyVal").textContent=qty};
-
-  // Cancel
   card.querySelector("#pmCancel").onclick=()=>closeProdModal();
-
-  // Add to cart
   card.querySelector("#pmAdd").onclick=()=>{
     const cleanToppings=toppings.filter(t=>t.nama.trim());
     for(let i=0;i<qty;i++){
@@ -1861,14 +1835,12 @@ document.getElementById("prodModal").addEventListener("click",e=>{
   if(e.target.id==="prodModal") closeProdModal();
 });
 
-/* Clear cart */
 document.getElementById("cartClearBtn").onclick=async()=>{
   if(!cart.length) return;
   const ok=await showConfirm({title:"Kosongkan keranjang?",message:"Semua item akan dihapus.",yesText:"Ya, Kosongkan",type:"warn"});
   if(ok){cart=[];renderCart();renderProducts()}
 };
 
-/* Mode switch */
 document.getElementById("modeSwitch").addEventListener("click",e=>{
   const btn=e.target.closest(".mode-btn");
   if(!btn) return;
@@ -1876,7 +1848,6 @@ document.getElementById("modeSwitch").addEventListener("click",e=>{
   document.querySelectorAll(".mode-btn").forEach(b=>b.classList.toggle("active",b===btn));
 });
 
-/* Tombol Bayar → modal bayar */
 document.getElementById("cartPayBtn").onclick=()=>{
   if(!cart.length) return;
   const total=cart.reduce((s,c)=>s+c.harga*c.qty,0);
@@ -1891,7 +1862,6 @@ document.getElementById("cartPayBtn").onclick=()=>{
   setTimeout(()=>document.getElementById("payInput").focus(),100);
 };
 
-/* Metode pembayaran */
 document.getElementById("methodGrid").addEventListener("click",e=>{
   const b=e.target.closest(".method-opt");
   if(!b) return;
@@ -1901,7 +1871,6 @@ document.getElementById("methodGrid").addEventListener("click",e=>{
   updateKembalian();
 });
 
-/* Input uang */
 document.getElementById("payInput").addEventListener("input",e=>{
   const inp=e.target;
   const cursorFromEnd=inp.value.length-(inp.selectionStart??inp.value.length);
@@ -1913,7 +1882,6 @@ document.getElementById("payInput").addEventListener("input",e=>{
   updateKembalian();
 });
 
-/* Tombol cepat */
 document.querySelectorAll(".pay-quick [data-pay]").forEach(b=>{
   b.onclick=()=>{
     const v=b.dataset.pay;
@@ -1951,7 +1919,6 @@ function updateKembalian(){
   }
 }
 
-/* Batal bayar */
 document.getElementById("payCancelBtn").onclick=()=>{
   document.getElementById("payModal").classList.remove("show");
 };
@@ -1959,7 +1926,6 @@ document.getElementById("payModal").addEventListener("click",e=>{
   if(e.target.id==="payModal") document.getElementById("payModal").classList.remove("show");
 });
 
-/* Konfirmasi bayar */
 document.getElementById("payConfirmBtn").onclick=async()=>{
   const total=cart.reduce((s,c)=>s+c.harga*c.qty,0);
   const bayar=selectedPayMethod==="Tunai"?parseNominal(document.getElementById("payInput").value):total;
@@ -1983,7 +1949,6 @@ document.getElementById("payConfirmBtn").onclick=async()=>{
     kasir:currentUser.nama
   };
 
-  // Disable tombol untuk cegah double click
   const btn=document.getElementById("payConfirmBtn");
   const orig=btn.textContent;
   btn.disabled=true;btn.textContent="Memproses...";
@@ -1993,7 +1958,6 @@ document.getElementById("payConfirmBtn").onclick=async()=>{
       const r=await api("checkout",payload);
       if(!r.success) throw new Error(r.message||"Gagal checkout");
     } else {
-      // Offline mode: simpan lokal
       const newTx={
         id:Date.now().toString(),
         timestamp:new Date().toISOString(),
@@ -2008,7 +1972,6 @@ document.getElementById("payConfirmBtn").onclick=async()=>{
       addLocal(newTx);
     }
 
-    // Data struk
     lastStrukData={
       nomor:nomorStruk,
       waktu:waktu,
@@ -2021,27 +1984,21 @@ document.getElementById("payConfirmBtn").onclick=async()=>{
       kembali:kembali
     };
 
-    // Tampilkan modal struk
     document.getElementById("payModal").classList.remove("show");
     showStruk(lastStrukData);
 
-    // Reset cart
     cart=[];
     renderCart();
     renderProducts();
 
-    // Reload data dashboard (async, tidak block UI)
     loadData();
-
   }catch(err){
     showToast(err.message||"Gagal checkout");
-    btn.disabled=false;btn.textContent=orig;
   } finally {
     btn.disabled=false;btn.textContent=orig;
   }
 };
 
-/* Generate nomor struk */
 function generateStrukNumber(){
   const d=new Date();
   const yy=String(d.getFullYear()).slice(2);
@@ -2052,8 +2009,7 @@ function generateStrukNumber(){
   return `SBK-${yy}${mm}${dd}-${hh}${mn}`;
 }
 
-/* Build HTML struk (untuk preview & print) */
-function buildStrukHTML(data,forPrint=false){
+function buildStrukHTML(data){
   const lines=[];
   const tglFmt=new Intl.DateTimeFormat("id-ID",{day:"2-digit",month:"2-digit",year:"numeric"}).format(data.waktu);
   const jamFmt=String(data.waktu.getHours()).padStart(2,"0")+":"+String(data.waktu.getMinutes()).padStart(2,"0");
@@ -2107,16 +2063,14 @@ function showStruk(data){
   document.getElementById("strukModal").classList.add("show");
 }
 
-/* Skip / Lanjut tanpa cetak */
 document.getElementById("strukSkipBtn").onclick=()=>{
   document.getElementById("strukModal").classList.remove("show");
 };
 
-/* Cetak struk */
 document.getElementById("strukPrintBtn").onclick=()=>{
   if(!lastStrukData) return;
   const printArea=document.getElementById("strukPrint");
-  printArea.innerHTML=buildStrukHTML(lastStrukData,true);
+  printArea.innerHTML=buildStrukHTML(lastStrukData);
   document.body.classList.add("struk-printing");
   setTimeout(()=>{
     window.print();
@@ -2125,11 +2079,6 @@ document.getElementById("strukPrintBtn").onclick=()=>{
     },500);
   },100);
 };
-
-/* ============================================================
-   INIT
-============================================================ */
-document.getElementById("loginYear").textContent=new Date().getFullYear();
 </script>
 </body>
 </html>
