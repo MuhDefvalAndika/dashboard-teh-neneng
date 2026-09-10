@@ -207,7 +207,7 @@ button{cursor:pointer;touch-action:manipulation}
 .toast{position:fixed;right:22px;bottom:22px;background:#111827;color:#fff;padding:13px 17px;border-radius:12px;z-index:9999;box-shadow:0 12px 30px #0004;max-width:calc(100vw - 44px);font-size:14px;font-weight:600;opacity:0;transform:translateY(16px);transition:opacity .22s,transform .22s;pointer-events:none}
 .toast.show{opacity:1;transform:translateY(0)}
 
-/* CONFIRM MODAL */
+/* CONFIRM */
 .confirm-modal{position:fixed;inset:0;background:#0f172acc;display:none;align-items:center;justify-content:center;padding:20px;z-index:9998;backdrop-filter:blur(3px)}
 .confirm-modal.show{display:flex;animation:fadeIn .15s}
 .confirm-card{background:#fff;border-radius:20px;width:100%;max-width:420px;padding:26px;box-shadow:0 30px 80px #0006;text-align:center;animation:popIn .2s}
@@ -225,12 +225,12 @@ button{cursor:pointer;touch-action:manipulation}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 @keyframes popIn{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:scale(1)}}
 
-/* DATA BANNER */
+/* BANNER */
 .data-banner{display:none;align-items:center;justify-content:space-between;gap:12px;background:#fff7ed;border:1px solid #fdba74;color:#9a3412;padding:11px 15px;border-radius:12px;margin-bottom:16px;font-size:12.5px;font-weight:650}
 .data-banner.show{display:flex}
 .data-banner button{border:0;background:#fdba74;color:#7c2d12;border-radius:8px;padding:8px 11px;font-size:11px;font-weight:750}
 
-/* EDIT MODAL */
+/* MODAL */
 .modal{position:fixed;inset:0;background:#0f172acc;display:none;align-items:center;justify-content:center;padding:20px;z-index:100}
 .modal.show{display:flex}
 .modal-card{background:#fff;border-radius:18px;width:100%;max-width:520px;padding:24px;box-shadow:0 30px 80px #0006;max-height:90vh;overflow:auto}
@@ -240,9 +240,7 @@ button{cursor:pointer;touch-action:manipulation}
 .overlay{position:fixed;inset:0;background:#0f172a99;z-index:40;display:none;opacity:0;transition:.2s}
 .overlay.show{display:block;opacity:1}
 
-/* ============================================================
-   KASIR
-============================================================ */
+/* KASIR */
 .kasir-wrap{display:grid;grid-template-columns:1fr 400px;gap:18px;align-items:start}
 .kasir-main{min-width:0}
 .kasir-header{background:#fff;border:1px solid var(--border);border-radius:17px;padding:18px 22px;margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;box-shadow:0 5px 22px #17233d08}
@@ -301,7 +299,6 @@ button{cursor:pointer;touch-action:manipulation}
 .cart-foot .btn{width:100%;padding:15px;font-size:15px;border-radius:12px;font-weight:800;letter-spacing:.2px}
 .cart-foot .btn:disabled{opacity:.5;cursor:not-allowed}
 
-/* MODAL PRODUK */
 .prod-modal{position:fixed;inset:0;background:#0f172acc;display:none;align-items:center;justify-content:center;padding:16px;z-index:9999;backdrop-filter:blur(3px)}
 .prod-modal.show{display:flex;animation:fadeIn .15s}
 .prod-modal-card{background:#fff;border-radius:20px;width:100%;max-width:440px;padding:22px;box-shadow:0 30px 80px #0006;max-height:90vh;overflow-y:auto;animation:popIn .2s}
@@ -315,7 +312,6 @@ button{cursor:pointer;touch-action:manipulation}
 .kuah-opt{padding:12px 10px;border-radius:11px;border:1.5px solid var(--border);background:#fff;font-size:13px;font-weight:750;color:#42526d;cursor:pointer;text-align:center;transition:.15s}
 .kuah-opt:hover{background:#f8fafc}
 .kuah-opt.active{background:var(--seblak);color:#fff;border-color:var(--seblak);box-shadow:0 6px 16px #dc262630}
-
 .topping-list{display:flex;flex-direction:column;gap:8px;margin-bottom:10px}
 .topping-row{display:grid;grid-template-columns:1fr 100px 36px;gap:6px;align-items:center}
 .topping-row input{padding:10px 12px;border:1.5px solid var(--border);border-radius:9px;font-size:13px;min-height:42px;width:100%}
@@ -325,7 +321,6 @@ button{cursor:pointer;touch-action:manipulation}
 .topping-add:hover{background:#f8fafc;border-color:#cbd5e1}
 .topping-subtotal{padding-top:10px;border-top:1px dashed var(--border);font-size:12.5px;color:var(--muted);text-align:right}
 .topping-subtotal b{color:var(--seblak);font-size:14px}
-
 .pm-qty{display:flex;justify-content:space-between;align-items:center;background:#f8fafc;border-radius:12px;padding:12px 16px;margin-bottom:18px}
 .pm-qty-label{font-size:13px;font-weight:750;color:#344054}
 .pm-qty-ctrl{display:flex;align-items:center;gap:12px}
@@ -337,7 +332,6 @@ button{cursor:pointer;touch-action:manipulation}
 .pm-actions{display:grid;grid-template-columns:1fr 1.2fr;gap:10px}
 .pm-actions .btn{padding:14px;font-size:14.5px;border-radius:12px;min-height:48px}
 
-/* MODAL BAYAR */
 .pay-modal{position:fixed;inset:0;background:#0f172acc;display:none;align-items:center;justify-content:center;padding:16px;z-index:9999;backdrop-filter:blur(3px)}
 .pay-modal.show{display:flex;animation:fadeIn .15s}
 .pay-card{background:#fff;border-radius:20px;width:100%;max-width:440px;padding:24px;box-shadow:0 30px 80px #0006;max-height:90vh;overflow-y:auto;animation:popIn .2s}
@@ -366,7 +360,6 @@ button{cursor:pointer;touch-action:manipulation}
 .pay-actions{display:grid;grid-template-columns:1fr 1.4fr;gap:10px}
 .pay-actions .btn{padding:15px;font-size:15px;border-radius:12px;min-height:52px;font-weight:800}
 
-/* STRUK */
 .struk-modal{position:fixed;inset:0;background:#0f172acc;display:none;align-items:center;justify-content:center;padding:16px;z-index:9999;backdrop-filter:blur(3px)}
 .struk-modal.show{display:flex;animation:fadeIn .15s}
 .struk-card{background:#fff;border-radius:20px;width:100%;max-width:400px;padding:22px;box-shadow:0 30px 80px #0006;max-height:90vh;overflow-y:auto;animation:popIn .2s}
@@ -380,7 +373,6 @@ button{cursor:pointer;touch-action:manipulation}
 .struk-actions{display:grid;grid-template-columns:1fr 1.2fr;gap:10px}
 .struk-actions .btn{padding:14px;font-size:14px;border-radius:12px;min-height:48px}
 
-/* PRINT AREA */
 #printHeader{display:none}
 #printArea{position:fixed;left:-99999px;top:0;width:900px;background:#fff;padding:30px;font-family:Inter,Arial,sans-serif;color:#17233d}
 #printArea h1{font-size:22px;margin:0 0 4px}
@@ -505,7 +497,6 @@ button{cursor:pointer;touch-action:manipulation}
   .data-banner{flex-direction:column;align-items:stretch;gap:9px;font-size:12px}
   .data-banner button{width:100%}
   .toast{right:14px;left:14px;bottom:16px;text-align:center;font-size:13.5px;padding:14px 16px}
-
   .kasir-header{padding:14px 16px;flex-direction:column;align-items:stretch;gap:12px}
   .kasir-header h2{font-size:17px}
   .mode-switch{width:100%}
@@ -561,41 +552,84 @@ button{cursor:pointer;touch-action:manipulation}
   .kasir-grid{grid-template-columns:1fr}
 }
 
+/* ============================================================
+   PRINT — LAPORAN BIASA (kalau body BUKAN .struk-printing)
+============================================================ */
 @media print{
-  body{background:#fff}
-  .sidebar,.overlay,.topbar,.mobile-btn,.data-banner,.toolbar,.action-btn,.btn,.hero-today,.section-head,.tx-header,.tx-filters,.tx-quick,.tx-count,.confirm-modal,.prod-modal,.pay-modal,.struk-modal,.toast{display:none!important}
-  .main{margin:0;width:100%;padding:0}
-  .card{box-shadow:none;border:1px solid #ccc;page-break-inside:avoid}
-  .tx-card{padding:0;border:0}
-  .section{display:none}
-  .section.active{display:block}
-  .table-wrap{overflow:visible}
-  .table thead{display:table-header-group}
-  .table th{background:#f1f5f9!important}
-  .table tr{display:table-row;background:none;border:0;padding:0;margin:0;box-shadow:none}
-  .table td{display:table-cell;border-bottom:1px solid #ddd;text-align:left;padding:12px 9px}
-  .table td::before{content:none}
-  #printHeader{display:block!important;text-align:center;margin-bottom:20px}
-  #printHeader h1{margin:0 0 6px;font-size:22px}
-  #printHeader p{margin:0;color:#555;font-size:12px}
+  body:not(.struk-printing){background:#fff}
+  body:not(.struk-printing) .sidebar,
+  body:not(.struk-printing) .overlay,
+  body:not(.struk-printing) .topbar,
+  body:not(.struk-printing) .mobile-btn,
+  body:not(.struk-printing) .data-banner,
+  body:not(.struk-printing) .toolbar,
+  body:not(.struk-printing) .action-btn,
+  body:not(.struk-printing) .btn,
+  body:not(.struk-printing) .hero-today,
+  body:not(.struk-printing) .section-head,
+  body:not(.struk-printing) .tx-header,
+  body:not(.struk-printing) .tx-filters,
+  body:not(.struk-printing) .tx-quick,
+  body:not(.struk-printing) .tx-count,
+  body:not(.struk-printing) .confirm-modal,
+  body:not(.struk-printing) .prod-modal,
+  body:not(.struk-printing) .pay-modal,
+  body:not(.struk-printing) .struk-modal,
+  body:not(.struk-printing) .toast{display:none!important}
+  body:not(.struk-printing) .main{margin:0;width:100%;padding:0}
+  body:not(.struk-printing) .card{box-shadow:none;border:1px solid #ccc;page-break-inside:avoid}
+  body:not(.struk-printing) .tx-card{padding:0;border:0}
+  body:not(.struk-printing) .section{display:none}
+  body:not(.struk-printing) .section.active{display:block}
+  body:not(.struk-printing) .table-wrap{overflow:visible}
+  body:not(.struk-printing) .table thead{display:table-header-group}
+  body:not(.struk-printing) .table th{background:#f1f5f9!important}
+  body:not(.struk-printing) .table tr{display:table-row;background:none;border:0;padding:0;margin:0;box-shadow:none}
+  body:not(.struk-printing) .table td{display:table-cell;border-bottom:1px solid #ddd;text-align:left;padding:12px 9px}
+  body:not(.struk-printing) .table td::before{content:none}
+  body:not(.struk-printing) #printHeader{display:block!important;text-align:center;margin-bottom:20px}
+  body:not(.struk-printing) #printHeader h1{margin:0 0 6px;font-size:22px}
+  body:not(.struk-printing) #printHeader p{margin:0;color:#555;font-size:12px}
 }
 
+/* ============================================================
+   PRINT — STRUK 58mm (kalau body ADA .struk-printing)
+   Sembunyikan SEMUA kecuali #strukPrint
+============================================================ */
 @media print{
-  body.struk-printing *{visibility:hidden!important}
-  body.struk-printing #strukPrint,body.struk-printing #strukPrint *{visibility:visible!important}
+  body.struk-printing{
+    background:#fff!important;
+    margin:0!important;padding:0!important;
+  }
+  body.struk-printing *{
+    visibility:hidden!important;
+  }
+  body.struk-printing #strukPrint,
+  body.struk-printing #strukPrint *{
+    visibility:visible!important;
+  }
   body.struk-printing #strukPrint{
     display:block!important;
-    position:absolute;left:0;top:0;
-    width:58mm;padding:2mm 2mm;
-    font-family:'Courier New',Courier,monospace;
-    font-size:9.5pt;line-height:1.35;color:#000;
-    background:#fff;
+    position:absolute!important;
+    left:0!important;
+    top:0!important;
+    width:58mm!important;
+    max-width:58mm!important;
+    padding:2mm 2mm!important;
+    margin:0!important;
+    font-family:'Courier New',Courier,monospace!important;
+    font-size:9.5pt!important;
+    line-height:1.35!important;
+    color:#000!important;
+    background:#fff!important;
+    box-shadow:none!important;
+    overflow:visible!important;
   }
-  body.struk-printing #strukPrint .center{text-align:center;display:block}
-  body.struk-printing #strukPrint .big{font-size:12pt;font-weight:900;letter-spacing:.5px;text-align:center;display:block}
-  body.struk-printing #strukPrint .divider{display:block;border-top:1px dashed #000;margin:4px 0}
-  body.struk-printing #strukPrint .row{display:flex;justify-content:space-between;gap:4px}
-  body.struk-printing #strukPrint .row-total{display:flex;justify-content:space-between;font-weight:900;font-size:10.5pt}
+  body.struk-printing #strukPrint .center{text-align:center!important;display:block!important}
+  body.struk-printing #strukPrint .big{font-size:12pt!important;font-weight:900!important;letter-spacing:.5px!important;text-align:center!important;display:block!important}
+  body.struk-printing #strukPrint .divider{display:block!important;border-top:1px dashed #000!important;margin:4px 0!important}
+  body.struk-printing #strukPrint .row{display:flex!important;justify-content:space-between!important;gap:4px!important}
+  body.struk-printing #strukPrint .row-total{display:flex!important;justify-content:space-between!important;font-weight:900!important;font-size:10.5pt!important}
   @page{size:58mm auto;margin:0}
 }
 </style>
@@ -682,7 +716,7 @@ button{cursor:pointer;touch-action:manipulation}
     <button data-page="statistik">📈 &nbsp; Statistik</button>
     <button class="logout" id="logoutBtn">↪ &nbsp; Keluar</button>
   </div>
-  <div class="sidebar-footer">Sistem Keuangan<br>Warnet & Warung Seblak<br><br>v4.0</div>
+  <div class="sidebar-footer">Sistem Keuangan<br>Warnet & Warung Seblak<br><br>v4.1</div>
 </aside>
 <div class="overlay" id="overlay"></div>
 
@@ -763,9 +797,12 @@ button{cursor:pointer;touch-action:manipulation}
         <h2>🔥 Kasir Seblak Teh Neneng</h2>
         <p>Tap menu untuk menambah pesanan · Klik produk di keranjang untuk ubah qty</p>
       </div>
-      <div class="mode-switch" id="modeSwitch">
-        <button class="mode-btn active" data-mode="Dine-in">🍽 Dine-in</button>
-        <button class="mode-btn" data-mode="Online">📱 Online</button>
+      <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+        <button class="btn btn-light" id="addMenuBtn" style="font-size:13px;min-height:38px;padding:9px 14px">➕ Tambah Menu</button>
+        <div class="mode-switch" id="modeSwitch">
+          <button class="mode-btn active" data-mode="Dine-in">🍽 Dine-in</button>
+          <button class="mode-btn" data-mode="Online">📱 Online</button>
+        </div>
       </div>
     </div>
 
@@ -925,6 +962,59 @@ button{cursor:pointer;touch-action:manipulation}
   <div class="prod-modal-card" id="prodModalCard"></div>
 </div>
 
+<!-- MODAL TAMBAH MENU MANUAL -->
+<div id="addMenuModal" class="prod-modal">
+  <div class="prod-modal-card">
+    <div class="pm-header">
+      <div class="pm-cat">Menu Baru</div>
+      <h3>Tambah Menu Manual</h3>
+      <div class="pm-price">Untuk menu dadakan / tidak ada di daftar</div>
+    </div>
+
+    <div class="pm-section">
+      <h4>Nama Menu</h4>
+      <input id="amName" type="text" placeholder="Contoh: Seblak Spesial Telur" style="width:100%;padding:12px;border:1.5px solid var(--border);border-radius:10px;font-size:14px;min-height:46px">
+    </div>
+
+    <div class="pm-section">
+      <h4>Harga</h4>
+      <div class="pay-input-wrap">
+        <span class="rp-prefix">Rp</span>
+        <input id="amPrice" class="pay-input" type="text" inputmode="numeric" placeholder="0" style="text-align:left;font-size:16px!important;min-height:50px!important;color:var(--text)!important">
+      </div>
+      <div class="pay-quick" style="margin-top:8px">
+        <button class="btn btn-light" data-am="5000">5rb</button>
+        <button class="btn btn-light" data-am="7000">7rb</button>
+        <button class="btn btn-light" data-am="10000">10rb</button>
+        <button class="btn btn-light" data-am="12000">12rb</button>
+        <button class="btn btn-light" data-am="15000">15rb</button>
+        <button class="btn btn-light" data-am="20000">20rb</button>
+      </div>
+    </div>
+
+    <div class="pm-section">
+      <h4>Kategori</h4>
+      <select id="amCategory" style="width:100%;padding:12px 38px 12px 14px;border:1.5px solid var(--border);border-radius:10px;font-size:14px;min-height:46px;background-image:url(&quot;data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2374809a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'/></svg>&quot;);background-repeat:no-repeat;background-position:right 13px center;background-size:16px;-webkit-appearance:none;appearance:none">
+        <option value="Seblak">Seblak</option>
+        <option value="Lumpia">Lumpia</option>
+        <option value="Spaghetti">Spaghetti</option>
+        <option value="Mie Jebew">Mie Jebew</option>
+        <option value="Cemilan">Cemilan</option>
+        <option value="Minuman">Minuman</option>
+        <option value="Lainnya">Lainnya</option>
+      </select>
+    </div>
+
+    <div class="pm-actions" style="grid-template-columns:1fr">
+      <button class="btn btn-light" id="amCancel">Batal</button>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px">
+      <button class="btn btn-light" id="amAddOnce" style="font-size:13px;padding:12px 8px">+ Ke Keranjang</button>
+      <button class="btn btn-seblak" id="amSave" style="font-size:13px;padding:12px 8px">💾 Simpan & Tambah</button>
+    </div>
+  </div>
+</div>
+
 <!-- MODAL BAYAR -->
 <div id="payModal" class="pay-modal">
   <div class="pay-card">
@@ -989,9 +1079,6 @@ button{cursor:pointer;touch-action:manipulation}
 <div id="printArea"></div>
 
 <script>
-/* ============================================================
-   KONFIGURASI
-============================================================ */
 const API_URL="https://script.google.com/macros/s/AKfycbyeVwEd0FuEV_dd0ROpzcX6Z8U4SBFKJilUbexoSuJUQB_skvVH55Q7XDXUNjP48BZRpg/exec";
 
 function localISO(d){const y=d.getFullYear(),m=String(d.getMonth()+1).padStart(2,"0"),day=String(d.getDate()).padStart(2,"0");return `${y}-${m}-${day}`}
@@ -1120,7 +1207,6 @@ document.getElementById("inDate").value=today();
 document.getElementById("outDate").value=today();
 document.getElementById("loginYear").textContent=new Date().getFullYear();
 
-/* SIDEBAR */
 const sidebarEl=document.getElementById("sidebar");
 const overlayEl=document.getElementById("overlay");
 function openSidebar(){sidebarEl.classList.add("open");overlayEl.classList.add("show")}
@@ -1128,7 +1214,6 @@ function closeSidebar(){sidebarEl.classList.remove("open");overlayEl.classList.r
 document.getElementById("menuBtn").onclick=()=>sidebarEl.classList.contains("open")?closeSidebar():openSidebar();
 overlayEl.onclick=closeSidebar;
 
-/* LOGIN */
 document.getElementById("loginForm").addEventListener("submit",async e=>{
   e.preventDefault();
   const u=document.getElementById("username").value.trim();
@@ -1176,7 +1261,6 @@ function logout(){sessionStorage.removeItem("loggedIn");sessionStorage.removeIte
 document.getElementById("logoutBtn").onclick=logout;
 if(sessionStorage.getItem("loggedIn")==="1")openApp();
 
-/* NAVIGASI */
 document.querySelectorAll(".nav button[data-page]").forEach(b=>b.onclick=()=>navigate(b.dataset.page));
 function navigate(page){
   document.querySelectorAll(".section").forEach(s=>s.classList.remove("active"));
@@ -1570,7 +1654,7 @@ document.getElementById("pdfBtn").onclick=downloadPDF;
 document.getElementById("reportPdfBtn").onclick=downloadPDF;
 
 /* ============================================================
-   ============   KASIR   ====================================
+   KASIR
 ============================================================ */
 var products=[];
 var cart=[];
@@ -2078,6 +2162,109 @@ document.getElementById("strukPrintBtn").onclick=()=>{
       document.body.classList.remove("struk-printing");
     },500);
   },100);
+};
+
+/* ============================================================
+   TAMBAH MENU MANUAL
+============================================================ */
+document.getElementById("addMenuBtn").onclick=()=>{
+  document.getElementById("amName").value="";
+  document.getElementById("amPrice").value="";
+  document.getElementById("amCategory").value="Seblak";
+  document.getElementById("addMenuModal").classList.add("show");
+  setTimeout(()=>document.getElementById("amName").focus(),100);
+};
+document.getElementById("amCancel").onclick=()=>{
+  document.getElementById("addMenuModal").classList.remove("show");
+};
+document.getElementById("addMenuModal").addEventListener("click",e=>{
+  if(e.target.id==="addMenuModal") e.currentTarget.classList.remove("show");
+});
+
+document.getElementById("amPrice").addEventListener("input",e=>{
+  const inp=e.target;
+  const cursorFromEnd=inp.value.length-(inp.selectionStart??inp.value.length);
+  const d=digits(inp.value);
+  const formatted=d?Number(d).toLocaleString("id-ID"):"";
+  inp.value=formatted;
+  const newPos=Math.max(0,formatted.length-cursorFromEnd);
+  try{inp.setSelectionRange(newPos,newPos)}catch(e){}
+});
+
+document.querySelectorAll("#addMenuModal [data-am]").forEach(b=>{
+  b.onclick=()=>{
+    document.getElementById("amPrice").value=Number(b.dataset.am).toLocaleString("id-ID");
+  };
+});
+
+function getManualMenuData(){
+  const nama=document.getElementById("amName").value.trim();
+  const harga=parseNominal(document.getElementById("amPrice").value);
+  const kategori=document.getElementById("amCategory").value;
+  if(!nama){showToast("Nama menu harus diisi");return null}
+  if(harga<1){showToast("Harga harus diisi");return null}
+  return {nama,harga,kategori};
+}
+
+document.getElementById("amAddOnce").onclick=()=>{
+  const data=getManualMenuData();
+  if(!data) return;
+  const tempProduct={
+    id:"MANUAL-"+Date.now(),
+    usaha:"Warung Seblak",
+    nama: data.nama,
+    harga: data.harga,
+    kategori: data.kategori,
+    aktif:true,
+    _manual:true
+  };
+  addToCart(tempProduct);
+  document.getElementById("addMenuModal").classList.remove("show");
+  showToast(data.nama+" ditambah ke keranjang");
+};
+
+document.getElementById("amSave").onclick=async()=>{
+  const data=getManualMenuData();
+  if(!data) return;
+
+  const btn=document.getElementById("amSave");
+  const orig=btn.textContent;
+  btn.disabled=true;btn.textContent="Menyimpan...";
+
+  try{
+    if(useApi()){
+      const r=await api("addProduct",{product:data});
+      if(!r.success) throw new Error(r.message||"Gagal menyimpan");
+      showToast("Menu disimpan ke daftar");
+      const newProduct={
+        id: r.id || ("MANUAL-"+Date.now()),
+        usaha:"Warung Seblak",
+        nama: data.nama,
+        harga: data.harga,
+        kategori: data.kategori,
+        aktif:true
+      };
+      addToCart(newProduct);
+      setTimeout(()=>loadProducts(),800);
+    } else {
+      const tempProduct={
+        id:"MANUAL-"+Date.now(),
+        usaha:"Warung Seblak",
+        nama:data.nama,
+        harga:data.harga,
+        kategori:data.kategori,
+        aktif:true,
+        _manual:true
+      };
+      addToCart(tempProduct);
+      showToast("Mode offline: hanya ke keranjang");
+    }
+    document.getElementById("addMenuModal").classList.remove("show");
+  }catch(err){
+    showToast(err.message||"Gagal menyimpan");
+  } finally {
+    btn.disabled=false;btn.textContent=orig;
+  }
 };
 </script>
 </body>
